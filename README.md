@@ -1,21 +1,17 @@
-# paris-0218-in-the-wild
-project #2 group #3
+#Project #2 Group #3 : *paris-0218-in-the-wild*
 
-Présentation du site :
+###Présentation du site : 
+ Plateforme de management d'événements et activités de la communauté grandissante des Wilders
 
--Plateforme de management d'événements et activités de la communauté grandissante des wilders
+###Fonctionnalités proposées :
 
-Fonctionnalités proposées :
+- Création d'événements par type: 
+ - get-togethers
+ - live coding
+ - sorties communautaires
+ - cours de soutiens
 
--création d'événements: 
-         par type: 
-         - get-togethers
-         -live coding
-         -sorties communautaires
-         - cours de soutiens
-
--participation aux événements:
-        -vue d'ensemble des événements
-        -bouton pour inscription
-        -base de données des utilisateurs
-
+- Participation aux événements:
+ - vue d'ensemble des événements
+ - bouton pour l'inscription
+ - base de données des utilisateurs
