@@ -1,5 +1,7 @@
 # In The Wild [ITW]
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 Plateforme de management d'événements et activités pour la communauté grandissante des Wilders !
 
 # Objectif 
