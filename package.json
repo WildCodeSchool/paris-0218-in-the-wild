@@ -1,4 +1,4 @@
-{
+{ 
   "private": true,
   "scripts": {
   	"client": "http-server client",
