@@ -12,4 +12,4 @@ app.listen(3247, () => console.log("j'écoute sur le port 3247"))
 
 app.get('/', (request, response) => {
 	response.send("Ok")
-})
+});
