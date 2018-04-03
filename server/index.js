@@ -1,5 +1,6 @@
 const express = require('express')
 
+// require de nos Mocks 
 const event1 = require('../mocks/events/1.json')
 const event2 = require('../mocks/events/2.json')
 
@@ -16,6 +17,10 @@ console.log(event1.id)
 const app = express()
 
 app.listen(3248, () => console.log("j'écoute sur le port 3247"))
+
+
+
+// Création des routes 
 
 app.get('/', (request, response) => {
 	response.send("Ok")
