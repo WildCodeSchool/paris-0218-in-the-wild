@@ -1,0 +1,15 @@
+{
+	"id": 1,
+	"pseudo": "saml",
+	"firstName": "Samuel",
+	"lastName": "Lambert",
+	"schoolName": "WCS Paris",
+	"email":"samuel.hotmail.fr",
+	"password": "12345",
+	"profilPicture": "String",
+	"createdAt": "04/04/2018",
+	"lastLogin": "04/04/2018",
+	"role": "Admin",
+	"isActive": "true"	
+}
+
