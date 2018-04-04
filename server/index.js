@@ -31,4 +31,4 @@ app.get('/events', (request, response) => {
   response.json(events)
 })
 
-app.listen(3248, () => console.log("j'écoute sur le port 3247"))'\n'
+app.listen(3248, () => console.log("j'écoute sur le port 3247"))
