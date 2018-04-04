@@ -1,5 +1,16 @@
 {
 	"id": 1,
-	"name" : "name of event",
-	"test" : " sa mnarcheee"
+	"title": "String",
+	"eventPicture": "String",
+	"description": "String",
+	"category": "String",
+	"location":"Location",
+	"createdBy": "User.id",
+	"attendees": "Array of User.id",
+	"createdAt": "Date",
+	"startingTime": "Date",
+	"endingTime": "Date"	
 }
+
+
+
