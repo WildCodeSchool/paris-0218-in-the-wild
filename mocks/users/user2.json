@@ -1,0 +1,15 @@
+{
+	"id": 2,
+	"pseudo": "benoit",
+	"firstName": "Benoit",
+	"lastName": "Rameau",
+	"schoolName": "WCS Paris",
+	"email":"Benoit.hotmail.fr",
+	"password": "67890",
+	"profilPicture": "String",
+	"createdAt": "04/04/2018",
+	"lastLogin": "04/04/2018",
+	"role": "Admin",
+	"isActive": "true"	
+}
+
