@@ -9,5 +9,5 @@
 	"attendees": "Array of User.id",
 	"createdAt": "Date",
 	"startingTime": "Date",
-	"endingTime": "Date"	
+	"endingTime": "Date"
 }

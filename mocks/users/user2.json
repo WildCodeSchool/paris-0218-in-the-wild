@@ -7,9 +7,8 @@
 	"email":"Benoit.hotmail.fr",
 	"password": "67890",
 	"profilPicture": "String",
-	"createdAt": "04/04/2018",
-	"lastLogin": "04/04/2018",
+	"createdAt": "1522792800000",
+	"lastLogin": "1522792800000",
 	"role": "Admin",
-	"isActive": "true"	
+	"isActive": "true"
 }
-
