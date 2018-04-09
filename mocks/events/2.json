@@ -1,0 +1,13 @@
+{
+	"id": 2,
+	"title": "JS Je soufffe",
+	"eventPicture": "String",
+	"description": "Boire boire boire",
+	"category": "Boire un verre",
+	"location":"Paris",
+	"createdBy": "User.id",
+	"attendees": "Array of User.id",
+	"createdAt": "Date",
+	"startingTime": "Date",
+	"endingTime": "Date"
+}
