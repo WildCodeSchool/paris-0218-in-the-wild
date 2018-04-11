@@ -53,6 +53,7 @@ span{
 .event3{
 	position: relative;
 	height: 180px;
+	height: auto;
 	margin: 5vw;
 	background-image: url("images/party.jpg");
 	background-size: cover; 
@@ -61,8 +62,8 @@ span{
 .event{
 	position: relative;
 	height: 180px;
-	margin: 5vw;
-	background: #22B573;
+	background-image: url("images/lebo.jpg");
+	background-size: cover;
 }
 
 .title{
@@ -98,4 +99,18 @@ span{
 	background-color: #E6E6E6;
 	color: white;
 	font-family: 'eventsFont';
+}
+
+.columnss {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.columnss div{
+
+	width: 48%;
+	margin :5px;
+
 }
