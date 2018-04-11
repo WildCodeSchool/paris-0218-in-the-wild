@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'titleFont';
+    src: url('fonts/Freight_Big_Book_Italic.otf');
+}
+
+@font-face {
+    font-family: 'eventsFont';
+    src: url('fonts/avenir/AEH.ttf');
+}
+
+img{
+	padding-top: 10vh; 
+	position: fixed;
+	height: 80vh;
+	opacity: 0.1;	
+}
+
+
+
+.section_name{
+	position: fixed;
+	padding-top: 12vh;
+	margin-left: 25%;
+	font-family: titleFont; 
+	color: black;
+	font-size: 8vw;
+	
+}
+
+span{
+	font-family: eventsFont;
+	padding-left: 40px; 
+	font-size: 3vw;
+	
+}
+
+.event1{
+	position: relative;
+	height: 180px;
+	margin: 5vw;
+	background-image: url("images/lebo.jpg");
+	background-size: cover; 
+}
+
+.event2{
+	position: relative;
+	height: 180px;
+	margin: 5vw;
+	background-image: url("images/marmotte.jpg");
+	background-size: cover; 
+}
+
+.event3{
+	position: relative;
+	height: 180px;
+	margin: 5vw;
+	background-image: url("images/party.jpg");
+	background-size: cover; 
+}
+
+.event{
+	position: relative;
+	height: 180px;
+	margin: 5vw;
+	background: #22B573;
+}
+
+.title{
+	position:absolute;
+	bottom: 0px;
+	font-size: 2vw; 
+	color: white;
+	font-family: 'eventsFont';
+}
+
+.date{
+	position:absolute;
+	bottom: 30px;
+	font-size: 1.5vw; 
+	color:white;
+	font-family: 'eventsFont';	
+}
+
+.btn{
+	margin-top: 90vh;
+	margin-left: 10vw;
+	position:fixed;
+}
+
+.button{
+	background-color: #22B573;
+	border: none;
+	color: white; 
+	font-family: 'eventsFont';
+}
+
+.button.button-outline{
+	background-color: #E6E6E6;
+	color: white;
+	font-family: 'eventsFont';
+}
