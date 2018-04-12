@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {margin:0; padding:0; font-family: 'Montserrat', sans-serif; color : #333333;}
+*:focus {
+    outline:0;
+}
+
+.container {
+
+}
+
+.eventImg {
+
+  /*background-color : #0ad0a2;*/
+
+  background-image: url(../img/social.jpg);
+  background-position:center;
+  background-size: cover;
+  width: 100%;
+  height: 420px;
+
+}
+
+.label-file {
+    background-color : rgba(255,255,255,.7);
+    padding: 20px;
+    float: right;
+    margin : 20% 3% 0% 0%;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #545454;
+    transition: .5s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.label-file:hover {
+    color: #22B573;
+    background-color: rgba(255,255,255,1)
+}
+
+.input-file {
+    display: none;
+}
+
+.form-container {
+
+  /*background-color : #468ef9;*/
+  width: 50%;
+  margin : 5% auto;
+
+}
+
+.eventForm {
+
+  text-align: center;
+  width: 100%;
+  min-width: 300px;
+}
+
+.tab span {
+
+  padding-right: 7%;
+  font-size : 32px;
+  letter-spacing: 1px;
+
+}
+
+.buttons {
+  margin : 5% 2% 5% 2%;
+}
+
+.buttons div button {
+
+  background-color : #22B573;
+  color : white;
+  border : 1px solid white;
+  padding : 10px;
+  width: 80px;
+  border-radius : 150px;
+  cursor :pointer;
+  transition: .4s;
+
+}
+
+.buttons div button:hover {
+
+  background-color : white;
+  border: 1px solid #22B573;
+  color : #22B573;
+
+}
+
+.buttons div button:active {
+
+  outline:none;
+
+}
+
+/* Style the input fields */
+.form-container input {
+ text-align: center;
+ width: 40%;
+ padding: 15px;
+ font-size: 17px;
+ border: 0px solid #aaaaaa;
+ border-bottom : 2px solid #aaaaaa;
+ background-color : white;
+ color : #393939;
+ transition: .5s;
+}
+
+.form-container input:active, .form-container input:focus {
+
+  border-bottom : 2px solid #0ad0a2;
+
+}
+
+/* Mark input boxes that gets an error on validation: */
+.form-container input.invalid {
+ background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+ display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbbbbb;
+ border: none;
+ border-radius: 50%;
+ display: inline-block;
+ opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+ opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+ background-color: #0ad0a2;
+}
+
+.button-hidden {
+
+  display: none;
+
+}
+
+.button-show {
+
+  display: inline;
+
+}
+
+.block {
+
+  display: block;
+
+}
