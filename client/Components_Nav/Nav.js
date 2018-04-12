@@ -14,7 +14,7 @@ export const createNavbar = nav => {
 	<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
 
 
-	<script>
+	<style>
 		body {
 		margin: 0;
 		color: #151515;
@@ -154,7 +154,7 @@ export const createNavbar = nav => {
 	    width: 100%;
 	    }
 	}
-	</script>
+	</style>
 </head>
 <body>
 	<nav>
