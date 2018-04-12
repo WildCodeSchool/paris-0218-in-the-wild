@@ -1,3 +1,5 @@
+import {createTodoElement} from './components/event.js'
+
 /* global fetch */
 fetch('http://localhost:3248/events/Boire')
   .then(res => res.json())

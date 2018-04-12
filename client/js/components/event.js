@@ -1,4 +1,4 @@
-const createNewEvent = (boireEvent) =>
+export const createNewEvent = (boireEvent) =>
   `<div>
   <div class= "column event">
   <p class="date">${boireEvent.startingTime}</p>
