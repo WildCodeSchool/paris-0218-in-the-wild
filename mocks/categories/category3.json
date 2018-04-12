@@ -1,6 +1,6 @@
 {
   "id": 3,
   "title": "Boire un coup",
-  "categoryPicture": "String",
-  "description": "Aller boire un verre"
+  "categoryPicture": "images/drink.gif",
+  "description": ["Boire", "un coup"]
 }
