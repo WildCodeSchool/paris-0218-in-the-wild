@@ -71,7 +71,7 @@ a:visited {
     color: black;
 }
 
-h4:hover, a:hover {
+h4:hover, a:hover:not(.logo) {
   	border-bottom: 10px solid #22B573;
 }
 
@@ -113,7 +113,7 @@ https://codepen.io/deniywn/pen/wcqDf?q=hover%20link&order=popularity&depth=every
 	display: block;
 	position: absolute;
 	left: 0px;
-	top: 100px;
+	top: 10px;
 }
 
 li {
@@ -124,8 +124,8 @@ li {
 
 .logo {
 	position: relative;
-	left: 40px;
-	top: 10px;
+	left: 30px;
+	top: 2px;
 }
 
 /**Media Queries**/
