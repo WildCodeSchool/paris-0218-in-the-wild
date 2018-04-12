@@ -1,8 +1,8 @@
 {
-  "id": 1,
-  "title": "String",
+  "id": 3,
+  "title": "mettre en place un serveur",
   "eventPicture": "String",
-  "description": "String",
+  "description": "un serveur ou une serveuse",
   "category": "String",
   "location": "Location",
   "createdBy": "User.id",
