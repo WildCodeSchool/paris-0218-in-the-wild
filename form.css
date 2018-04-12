@@ -47,6 +47,27 @@ input[type=text], select, textarea
   font-family: 'Asap', sans-serif;
 }
 
+input[type=password], select, textarea
+{
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: 'Asap', sans-serif;
+}
+
 /* Style the submit button with a specific background color etc */
 input[type=submit]
 {
@@ -82,24 +103,4 @@ input[type=submit]:hover
   font-size: 15px;
 }
 
-/* Add a background color and some padding around the form */
-.label-file
-{
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  font-size:20px;
-  color:black;
-  font-family: 'Asap', sans-serif;
-}
-
-#regForm .label-file
-{
-  
-  padding-top: 110px;
-}
-
-.input-file {
-  display: none;
-}
 
