@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "title": "git push et les robot tueurs",
+  "eventPicture": "String",
+  "description": "problématiques et enjeux pour le 21e siècle",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
