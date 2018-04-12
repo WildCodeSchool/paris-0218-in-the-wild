@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "title": "coder comme Clément",
+  "eventPicture": "String",
+  "description": "pour ceux que ça tenterait...",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
