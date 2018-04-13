@@ -1,5 +1,31 @@
-export const createNavbar = (nav) =>
- `
+const action = (actionText, actionLink) => `
+  <a href=${actionLink}>
+    <h4>#${actionText}</h4>
+  </a>
+`
+
+const topBarLogo = () => `
+  <div id="header-logo">
+    <h5 class="itw">IT<span>W</span></h5>
+  </div>
+`
+
+const profil = props => `
+  <div id="profil">
+    X
+  </div>
+`
+
+export const createHeader = props => `
+  <nav>
+    ${profil(props)}
+    ${action('JE PARTICIPE', '#')}
+    ${action('JE PROPOSE', '#')}
+    ${topBarLogo()}
+  </nav>
+`
+
+/* `
 <nav>
 <div class="row">
 <!--<div class="column column-10">
@@ -56,4 +82,4 @@ export const createNavbar = (nav) =>
 </ul>
 </div>
 `
-
+*/
