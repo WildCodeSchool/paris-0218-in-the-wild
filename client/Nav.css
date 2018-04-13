@@ -1,5 +1,5 @@
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -149,6 +149,13 @@ header nav a {
 #main nav a {
   display: block;
   height: 12.5rem;
+}
+
+* {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid;
+  background: #00000020;
 }
 
 /**Media Queries**/
