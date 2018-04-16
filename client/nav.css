@@ -1,5 +1,5 @@
 html, body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -151,6 +151,7 @@ header nav a {
   height: 12.5rem;
 }
 
+
 * {
   padding: 5px;
   margin: 5px;
@@ -158,8 +159,9 @@ header nav a {
   background: #00000020;
 }
 
-/**Media Queries**/
 
+/**Media Queries*
+*/
 @media (min-width: 40rem){
   .row {
     flex-direction: row;
