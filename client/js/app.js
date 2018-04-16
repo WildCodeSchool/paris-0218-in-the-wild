@@ -1,5 +1,6 @@
 import {createNewEvent} from './components/event.js'
-import {showCategory} from './components/showCategory.js'
+import {showCategory} from './components/show-category.js'
+import {createHeader} from './components/nav.js'
 
 /* global fetch */
 fetch('http://localhost:3248/events/Boire')
@@ -17,3 +18,6 @@ fetch('http://localhost:3248/categories')
     const eventCategories = showCategory(categories[0])
     eventCategory.innerHTML = eventCategories
   })
+
+const headerEl = document.getElementById('header')
+headerEl.innerHTML = createHeader({})

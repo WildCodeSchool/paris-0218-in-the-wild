@@ -1,0 +1,11 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+@font-face{
+
+	font-family: 'titleFont';
+	src:url('fonts/Freight_Big_Book_Italic.otf');
+}
