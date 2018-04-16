@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'titleFont';
-    src: url('fonts/Freight_Big_Book_Italic.otf');
+  font-family: 'titleFont';
+  src: url('fonts/Freight_Big_Book_Italic.otf');
 }
 
 @font-face {
@@ -9,29 +9,26 @@
 }
 
 img{
-	padding-top: 10vh; 
+	padding-top: 10vh;
 	position: fixed;
 	height: 80vh;
-	opacity: 0.1;	
+	opacity: 0.1;
 }
 
-
-
-.section_name{
+.section-name{
 	position: fixed;
 	padding-top: 12vh;
 	margin-left: 25%;
-	font-family: titleFont; 
+	font-family: titleFont;
 	color: black;
 	font-size: 8vw;
-	
+
 }
 
 span{
 	font-family: eventsFont;
-	padding-left: 40px; 
+	padding-left: 40px;
 	font-size: 3vw;
-	
 }
 
 .event1{
@@ -39,7 +36,7 @@ span{
 	height: 180px;
 	margin: 5vw;
 	background-image: url("images/lebo.jpg");
-	background-size: cover; 
+	background-size: cover;
 }
 
 .event2{
@@ -47,7 +44,7 @@ span{
 	height: 180px;
 	margin: 5vw;
 	background-image: url("images/marmotte.jpg");
-	background-size: cover; 
+	background-size: cover;
 }
 
 .event3{
@@ -56,7 +53,7 @@ span{
 	height: auto;
 	margin: 5vw;
 	background-image: url("images/party.jpg");
-	background-size: cover; 
+	background-size: cover;
 }
 
 .event{
@@ -69,7 +66,7 @@ span{
 .title{
 	position:absolute;
 	bottom: 0px;
-	font-size: 2vw; 
+	font-size: 2vw;
 	color: white;
 	font-family: 'eventsFont';
 }
@@ -77,9 +74,9 @@ span{
 .date{
 	position:absolute;
 	bottom: 30px;
-	font-size: 1.5vw; 
+	font-size: 1.5vw;
 	color:white;
-	font-family: 'eventsFont';	
+	font-family: 'eventsFont';
 }
 
 .btn{
@@ -91,7 +88,7 @@ span{
 .button{
 	background-color: #22B573;
 	border: none;
-	color: white; 
+	color: white;
 	font-family: 'eventsFont';
 }
 
@@ -108,9 +105,7 @@ span{
 	width: 100%;
 }
 
-.columnss div{
-
+.columnss div {
 	width: 48%;
 	margin :5px;
-
 }
