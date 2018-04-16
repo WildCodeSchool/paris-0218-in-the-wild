@@ -111,12 +111,12 @@ input[type=submit]:hover
   background-color: #25a5c4;
 }
 
-#lname
+#lsname
 {
   font-size:15px;
 }
 
-#fname
+#Username
 {
   font-size:15px;
 }
@@ -126,4 +126,17 @@ input[type=submit]:hover
   font-size: 15px;
 }
 
+#password
+{
+  font-size: 15px;
+}
 
+
+#yourpass
+{
+font-size: 15px;
+}
+
+#mailing {
+  font-size: 15px;
+}
