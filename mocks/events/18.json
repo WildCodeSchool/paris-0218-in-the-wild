@@ -1,0 +1,13 @@
+{
+  "id": 18,
+  "title": "html dynamique",
+  "eventPicture": "String",
+  "description": "générer son html dynamiquement",
+  "category": "live-coding",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
