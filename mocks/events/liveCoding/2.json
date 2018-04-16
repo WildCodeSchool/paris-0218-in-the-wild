@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "title": "pirater la CIA",
+  "eventPicture": "String",
+  "description": "en live",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
