@@ -1,0 +1,13 @@
+{
+  "id": 16,
+  "title": "le programmeur aujourd'hui",
+  "eventPicture": "String",
+  "description": "enjeux identitaires et culturels",
+  "category": "get-together",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

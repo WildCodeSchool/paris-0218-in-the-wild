@@ -1,0 +1,13 @@
+{
+  "id": 9,
+  "title": "construire une bombe en JS",
+  "eventPicture": "String",
+  "description": "niveau débutant",
+  "category": "cours-de-soutien",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
