@@ -10,13 +10,12 @@ if (!category) {
   // rediriger vers la page d'accueil
 }
 
-console.log({ category })
+// console.log({ category })
 
 fetch('http://localhost:3248/categories')
   .then(res => res.json())
   .then(categories => {
     // categories.map(categoryLink).join('')
-
     const eventCategory = document.getElementById('category')
     const matchedCategory = categories
       .find(cat => cat.normalizedTitle === category)
