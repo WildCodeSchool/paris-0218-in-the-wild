@@ -1,6 +1,7 @@
 {
   "id": 1,
   "title": "Cours de soutien",
+  "normalizedTitle": "cours-de-soutien",
   "categoryPicture": "images/nope-thumb-400xauto-16772.gif",
   "description": ["Cours", "de soutien"]
 }
