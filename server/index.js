@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const util = require('util') 
+const util = require('util')
 
 const express = require('express')
 
@@ -17,7 +17,7 @@ const readDirFileContents = dirPath => readdir(dirPath)
 
     return Promise.all(files)
   })
-  .then(filesInJSON => filesInJSON.map(JSON.parse))  
+  .then(filesInJSON => filesInJSON.map(JSON.parse))
 
 const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
@@ -65,7 +65,7 @@ app.get('/events/:id', (request, response, next) => {
 
 app.get('/categories', (request, response, next) => {
   readMockFolder('categories')
-    .then(categories =>response.json(categories))
+    .then(categories => response.json(categories))
     .catch(next)
 })
 
