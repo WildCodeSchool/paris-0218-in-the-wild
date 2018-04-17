@@ -1,6 +1,7 @@
 {
   "id": 4,
   "title": "Live coding",
+  "normalizedTitle": "live-coding",
   "categoryPicture": "images/matrix.gif",
   "description": ["Live", "coding"]
 }

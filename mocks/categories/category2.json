@@ -1,6 +1,7 @@
 {
   "id": 2,
   "title": "Get Together",
+  "normalizedTitle": "get-together",
   "categoryPicture": "images/matrix.gif",
   "description": ["Get", "Together"]
 }
