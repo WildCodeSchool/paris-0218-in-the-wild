@@ -11,38 +11,36 @@
   <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-<header id="header"></header>
-<section id="main">
-  <nav id="profil">
-    <a href='#'></a>
-    <a href='#'></a>
-    <a href='#'></a>
-    <a href='#'></a>
-  </nav>
+  <header id="header"></header>
+  <section id="main">
+    <nav id="profil">
+      <a href='?category=cours-de-soutien'></a>
+      <a href='?category=live-coding'></a>
+      <a href='?category=get-together'></a>
+      <a href='?category=boire-un-coup'></a>
+    </nav>
 
-  <div class= "container_fluid">
+    <div class= "container_fluid">
+      <div id="category"></div>
+      <div class="row bloc">
+        <div class="column image_bloc">
+        <!--  <p class="section_name">Boire <br> <span>un coup</span></p>
+          <img src="images/drink.gif" alt="gif verre"> -->
 
-    <div id="category"></div>
+        </div>
+        <div class= "btn">
+          <a class="button" href="#">+Populaire</a>
+          <a class="button button_outline" href="#">+Récent</a>
+        </div>
+        <div class="column events_bloc">
+          <div class="columnss" id="event"></div>
+        </div>
 
-    <div class="row bloc">
-      <div class="column image_bloc">
-      <!--  <p class="section_name">Boire <br> <span>un coup</span></p>
-        <img src="images/drink.gif" alt="gif verre"> -->
-
-      </div>
-      <div class= "btn">
-        <a class="button" href="#">+Populaire</a>
-        <a class="button button_outline" href="#">+Récent</a>
-      </div>
-      <div class="column events_bloc">
-        <div class="columnss" id="event"></div>
       </div>
 
     </div>
 
-  </div>
-
-</section>
-<script type="module" src="/js/app.js"></script>
+  </section>
+  <script type="module" src="/js/app.js"></script>
 </body>
 </html>

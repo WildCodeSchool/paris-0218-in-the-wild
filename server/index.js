@@ -41,24 +41,24 @@ app.get('/', (request, response) => {
   response.send('Ok')
 })
 
+app.get('/events/category/:category', (request, response) => {
+  const selectedEvents = events
+    .filter(event => event.category === request.params.category)
+
+  response.json(selectedEvents)
+})
+
 app.get('/events/:id', (request, response) => {
-  // Parametre url à récupérer depuis notre client	
-  let event = 1 // Au lieu d'avoir une valeur en dure, on aura notre req.params
-  let soutien = events.filter(elem => elem.id == event)
-  
+  // Parametre url à récupérer depuis notre client
+  const event = 1 // Au lieu d'avoir une valeur en dure, on aura notre req.params
+  const soutien = events.find(elem => elem.id === event)
 
   console.log(soutien)
   response.json(soutien)
 })
 
 app.get('/categories', (request, response) => {
-  
-  // Parametre url à récupérer depuis notre client	
-  let category = 1 // Au lieu d'avoir une valeur en dure, on aura notre req.params
-
-  let cat = categories.filter(elem => elem.id == category)
-
-  response.json(cat)
+  response.json(categories)
 })
 
 app.listen(3248, () => console.log("j'écoute sur le port 3248"))
