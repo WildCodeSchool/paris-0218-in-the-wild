@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 19,
+  "title": "pirater la CIA",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "en live",
+  "category": "live-coding",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

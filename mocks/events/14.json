@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 14,
+  "title": "git push et les robot tueurs",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "problématiques et enjeux pour le 21e siècle",
+  "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

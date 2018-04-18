@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 16,
+  "title": "le programmeur aujourd'hui",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "enjeux identitaires et culturels",
+  "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",
