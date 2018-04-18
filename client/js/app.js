@@ -29,8 +29,11 @@ fetch(`http://localhost:3248/events/category/${category}`)
   .then(events => {
     const eventElement = document.getElementById('event')
     const eventElements = events.map(createNewEvent).join('')
+    console.log({ events, eventElements })
     eventElement.innerHTML = eventElements
   })
+
+
 
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
