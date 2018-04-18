@@ -4,6 +4,7 @@ const util = require('util')
 
 const express = require('express')
 
+
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
 const isJSON = str => str.endsWith('.json')
@@ -19,6 +20,7 @@ const readDirFileContents = dirPath => readdir(dirPath)
   })
   .then(filesInJSON => filesInJSON.map(JSON.parse))
 
+
 const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
@@ -31,10 +33,55 @@ app.use((request, response, next) => {
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
+
+
+app.use((request, response, next)=> {
+if(request.method === 'GET') return next()
+  let accumulator = ''
+
+    request.on('data', data => {
+    accumulator += data
+  })
+    request.on('end', () => {
+        try {
+        request.body = JSON.parse(accumulator)
+      next()
+   }catch (err){
+     next(err)
+   }   
+  })
+})
+
+
 // Création des routes
 app.get('/', (request, response) => {
   response.send('Ok')
 })
+
+
+
+app.post('/users', (request, response, next)=>{
+  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
+  const filename = `${id}.JSON`
+  const filepath = path.join(__dirname, '../mocks/users', filename)
+
+const content = {
+  id: id, 
+  firstName: request.body.firstNameUsers,
+  lastName: request.body.lastNameUsers,
+  pseudo: request.body.username,
+  email: request.body.mail,
+  schoolName:request.body.schoolist,
+  password: request.body.password,
+  validePassword: request.body.confirmPassword, 
+  CreatedAt: Date.now(),
+}
+
+ readFile(filepath, JSON.stringify(content), 'utf8' )
+    .then(() => response.json('ok'))
+    .catch(next)
+})
+
 
 app.get('/events/category/:category', (request, response, next) => {
   readMockFolder('events')
