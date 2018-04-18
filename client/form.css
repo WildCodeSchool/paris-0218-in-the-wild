@@ -111,6 +111,11 @@ input[type=submit]:hover
   background-color: #25a5c4;
 }
 
+#fname
+{
+  font-size:15px;
+}
+
 #lsname
 {
   font-size:15px;
@@ -121,7 +126,7 @@ input[type=submit]:hover
   font-size:15px;
 }
 
-#country
+#school
 {
   font-size: 15px;
 }
