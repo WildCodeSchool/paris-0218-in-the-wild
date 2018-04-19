@@ -1,11 +1,10 @@
 import {createNewEvent} from './components/event.js'
 import {showCategory} from './components/show-category.js'
 import {createHeader} from './components/nav.js'
-/*import {createnavbar} from './components/nav.js'*/
-
-
-import { init } from './eventProposition/eventForm.js'
 import {form} from './components/eventProposition.js'
+/*import {createnavbar} from './components/nav.js'*/
+import { init } from './eventProposition/eventForm.js'
+
 
 /* global fetch */
 fetch('http://localhost:3248/events/Boire')
@@ -26,13 +25,3 @@ fetch('http://localhost:3248/categories')
 
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
-
-// form
-
-fetch('http//localhost:3248/eventProposition')
-  .then(res => res.json())
-  .then(propos => {
-    const formContainer = document.querySelector('.container')
-    formContainer.innerHTML = form()
-    init()
-  })

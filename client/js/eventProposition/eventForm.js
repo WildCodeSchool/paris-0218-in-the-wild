@@ -87,3 +87,5 @@ export const init = () => {
   nextBtn.addEventListener('click', () => nextPrev(1))
   showTab(currentTab)
 }
+
+init()
