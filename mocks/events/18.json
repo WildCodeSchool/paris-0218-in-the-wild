@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 18,
+  "title": "html dynamique",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "générer son html dynamiquement",
+  "category": "live-coding",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

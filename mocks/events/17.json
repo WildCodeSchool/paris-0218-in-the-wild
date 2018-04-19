@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 17,
+  "title": "array, const, string",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "et si tout se passait en dessous de la ceinture...",
+  "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

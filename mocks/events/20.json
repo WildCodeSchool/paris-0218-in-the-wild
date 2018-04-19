@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 20,
+  "title": "copier un fichier avec la console",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "niveau avancé",
+  "category": "live-coding",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

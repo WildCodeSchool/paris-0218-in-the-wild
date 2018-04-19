@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 13,
+  "title": "Git Pull",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "Doit-on git pull avant ou après manger",
+  "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 15,
+  "title": "HTML, wtf is it?",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "finalement, on en sait peu",
+  "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

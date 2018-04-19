@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 11,
+  "title": "coder comme Clément",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "pour ceux que ça tenterait...",
+  "category": "cours-de-soutien",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",
