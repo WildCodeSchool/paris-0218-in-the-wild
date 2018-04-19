@@ -32,4 +32,8 @@ app.get('/categories', (request, response) => {
   response.json(categories)
 })
 
+// app.post('/eventProposition', (request, response) => {
+//   response.json(categories)
+// })
+
 app.listen(3248, () => console.log("j'écoute sur le port 3248"))
