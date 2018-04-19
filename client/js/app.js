@@ -1,7 +1,12 @@
-import {createNewEvent} from './components/event.js'
-import {showCategory} from './components/show-category.js'
-import {createHeader} from './components/nav.js'
-
+import {
+  createNewEvent
+} from './components/event.js'
+import {
+  showCategory
+} from './components/show-category.js'
+import {
+  createHeader
+} from './components/nav.js'
 
 const params = new URLSearchParams(window.location.search)
 
@@ -36,29 +41,28 @@ fetch(`http://localhost:3248/events/category/${category}`)
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+document.getElementById('regForm').addEventListener('submit', event => {
+  event.preventDefault()
+  const firstNameUsers = document.getElementById('fname')
+  const lastNameUsers = document.getElementById('lsname')
+  const username = document.getElementById('Username')
+  const mail = document.getElementById('mailing')
+  const schoolist = document.getElementById('school')
+  const password = document.getElementById('password')
+  const confirmPassword = document.getElementById('yourpass')
 
+  const form = {
+    firstName: firstNameUsers.value,
+    lastName: lastNameUsers.value,
+    pseudo: username.value,
+    email: mail.value,
+    schoolName: schoolist.value,
+    password: password.value,
+  }
 
-document.getElementById('regForm').addEventListener('submit', event=> {
- event.preventDefault()
-  const firstNameUsers = document.getElementById('fname').value
-  const lastNameUsers = document.getElementById('lsname').value
-  const username = document.getElementById('Username').value
-  const mail = document.getElementById('mailing').value
-  const schoolist = document.getElementById('school').value
-  const password = document.getElementById('password').value
-  const confirmPassword = document.getElementById('yourpass').value
- 
-fetch('http://localhost:3248/users', {
- method: 'post',
- body: JSON.stringify({
-  firstName: firstNameUsers,
-  lastName: lastNameUsers,
-  pseudo: username,
-  email: mail,
-  schoolName: schoolist,
-  password: password,
-  validePassword : confirmPassword,
- })
-    }).then(res => console.log(res.status, res.statusCode))
+  fetch('http://localhost:3248/users', {
+    method: 'post',
+    body: JSON.stringify(form)
+  })
+    .then(res => console.log(res.status, res.statusCode))
 })
-

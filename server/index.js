@@ -4,7 +4,7 @@ const util = require('util')
 
 const express = require('express')
 
-
+const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
 const isJSON = str => str.endsWith('.json')
@@ -20,11 +20,10 @@ const readDirFileContents = dirPath => readdir(dirPath)
   })
   .then(filesInJSON => filesInJSON.map(JSON.parse))
 
-
 const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
-readMockFolder('events').then(console.log, console.error)
+// readMockFolder('events').then(console.log, console.error)
 
 const app = express()
 
@@ -34,61 +33,56 @@ app.use((request, response, next) => {
   next()
 })
 
-
-app.use((request, response, next)=> {
-if(request.method === 'GET') return next()
+app.use((request, response, next) => {
+  if (request.method === 'GET') return next()
   let accumulator = ''
 
-    request.on('data', data => {
+  request.on('data', data => {
     accumulator += data
   })
-    request.on('end', () => {
-        try {
-        request.body = JSON.parse(accumulator)
+  request.on('end', () => {
+    try {
+      request.body = JSON.parse(accumulator)
       next()
-   }catch (err){
-     next(err)
-   }   
+    } catch (err) {
+      next(err)
+    }
   })
 })
-
 
 // Création des routes
 app.get('/', (request, response) => {
   response.send('Ok')
 })
 
-
-
-app.post('/users', (request, response, next)=>{
-  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
+// route formulaire
+app.post('/users', (request, response, next) => {
+  const id = Math.random().toString(36).slice(2).padEnd(4, '0')
   const filename = `${id}.JSON`
   const filepath = path.join(__dirname, '../mocks/users', filename)
 
-const content = {
-  id: id, 
-  firstName: request.body.firstNameUsers,
-  lastName: request.body.lastNameUsers,
-  pseudo: request.body.username,
-  email: request.body.mail,
-  schoolName:request.body.schoolist,
-  password: request.body.password,
-  validePassword: request.body.confirmPassword, 
-  CreatedAt: Date.now(),
-}
+  const content = {
+    id: id,
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
+    pseudo: request.body.pseudo,
+    email: request.body.email,
+    schoolName: request.body.schoolName,
+    password: request.body.password,
+    validePassword: request.body.confirmPassword,
+    CreatedAt: Date.now()
+  }
 
- readFile(filepath, JSON.stringify(content), 'utf8' )
+  writeFile(filepath, JSON.stringify(content), 'utf8')
     .then(() => response.json('ok'))
     .catch(next)
 })
-
 
 app.get('/events/category/:category', (request, response, next) => {
   readMockFolder('events')
     .then(events => {
       const selectedEvents = events
-        .filter(event => event.category === request.params.category)
-
+        .filter(event => event.category === request.params.category)       
       response.json(selectedEvents)
     })
     .catch(next)
