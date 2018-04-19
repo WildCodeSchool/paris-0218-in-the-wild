@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "title": "créer un dossier avec vos fichiers dedans",
+  "eventPicture": "String",
+  "description": "coding en live",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "title": "array, const, string",
+  "eventPicture": "String",
+  "description": "et si tout se passait en dessous de la ceinture...",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

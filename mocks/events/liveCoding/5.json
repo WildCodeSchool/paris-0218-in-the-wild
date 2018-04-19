@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "title": "coding de Google",
+  "eventPicture": "String",
+  "description": "dans cette présentation live pour débutants, nous recoderons le moteur de recherche Google",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

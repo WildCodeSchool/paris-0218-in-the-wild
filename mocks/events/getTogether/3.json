@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "title": "HTML, wtf is it?",
+  "eventPicture": "String",
+  "description": "finalement, on en sait peu",
+  "category": "String",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
