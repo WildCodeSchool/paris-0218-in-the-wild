@@ -2,21 +2,21 @@ html, body {
   min-height: 100vh;
 }
 
-body {
+/*body {
   margin: 0;
   color: #151515;
   display: flex;
   flex-direction: column;
 }
-
-.row {
+*/
+/*.row {
   border-bottom: 4px solid #22B573;
   height: 10rem;
-}
+}*/
 
-.column.column-10 {
+/*.column.column-10 {
   border-right: 4px solid #22B573;
-}
+}*/
 
 /*** La police 👮 ***/
 
@@ -27,6 +27,12 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'titleFont';
+  src: url('fonts/Freight_Big_Book_Italic.otf');
+}
+
+
 /*Freight Text alternative Sumana or Jua*/
 /*Futura alternative Muli*/
 
@@ -34,7 +40,7 @@ h4 {
   font-weight: 600;
   font-family: 'Muli', sans-serif;
   font-style: italic;
-  font-size: 2.2rem;/*font-size: 1.2vw;*/
+  font-size: 2.2rem;
   text-align: center;
 
   position: relative;
@@ -44,12 +50,12 @@ h4 {
 
 /*JE PROPOSE*/
 
-.prop {
+/*.prop {
   position: relative;
-/*  left: 27vw;*/
+  left: 27vw;
   padding-left: 0;
   text-align: left;
-}
+}*/
 
 /*ITW*/
 
@@ -61,28 +67,29 @@ h4 {
 /*Le W de ITW*/
 
 span {
-  font-family: 'Jua', sans-serif;
+  font-family: 'titleFont';
   font-style: italic;
   color: #151515;
-  font-size: 7rem;/*font-size: 4vw;*/
+  font-size: 7rem;
 }
 
 /*Les liens JE PARTICIPE JE PROPOSE*/
 
-a:link {
+/*a:link {
   color: black;
 }
-
+*/
 a:visited {
   color: black;
 }
 
-h4:hover, a:hover:not(.logo) {
-  border-bottom: 10px solid #22B573;
+h4:hover{
+  background-image:linear-gradient(180deg,transparent 50%,#56B278 0);
+  background-repeat: no-repeat; 
 }
 
 /*Sidebar*/
-.sidebar {
+/*.sidebar {
   border-right: 4px solid #22B573;
   width: 174px;
   height: 100%;
@@ -90,7 +97,7 @@ h4:hover, a:hover:not(.logo) {
   position: absolute;
   left: 0px;
   top: 10px;
-}
+}*/
 
 li {
   list-style: none;
@@ -98,11 +105,11 @@ li {
   left: 1.5rem;
 }
 
-.logo {
+/*.logo {
   position: relative;
   left: 30px;
   top: 2px;
-}
+}*/
 
 header nav.row {
   margin-left: 0
@@ -110,7 +117,7 @@ header nav.row {
 
 header nav {
   display: flex;
-  border-bottom: 0.7rem solid;
+  border-bottom: 0.7rem solid #22B573;
 }
 
 header nav a {
@@ -118,6 +125,7 @@ header nav a {
   padding: 0 2rem;
   flex-grow: 0.5;
   flex-shrink: 1;
+  color: black;
 }
 
 #header-logo {
@@ -127,7 +135,7 @@ header nav a {
 
 #profil {
   width: 13.2rem;
-  border-right: 0.7rem solid;
+  border-right: 0.7rem solid #22B573;
   text-align: center;
   flex-shrink: 0;
 }
@@ -137,13 +145,13 @@ header nav a {
   flex-grow: 1;
 }
 
-#main section {
+/*#main section {
   flex-grow: 1;
-}
+}*/
 
 #main nav {
   width: 13.2rem;
-  border-right: 0.7rem solid;
+  border-right: 0.7rem solid #22B573;
 }
 
 #main nav a {
@@ -162,10 +170,10 @@ header nav a {
 
 /**Media Queries*
 */
-@media (min-width: 40rem){
+/*@media (min-width: 40rem){
   .row {
     flex-direction: row;
     margin-left: -1.0rem;
     width: 100%;
   }
-}
+}*/
