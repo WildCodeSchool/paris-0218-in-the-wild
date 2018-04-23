@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event{
+  width: 50%; 
+}
+
+.image{
+  width: 50rem;
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+ .left-box{
+  flex-direction: column;
+ }
+
+.right-box{
+  flex-direction: column;
+}
+
+.title{
+  font-family: eventsFont;
+  font-size: 2rem;
+}
