@@ -1,6 +1,6 @@
 export const createNewEvent = (event) =>
   `<div>
-  <a href="event.html"><div class= "column event">
+  <a href="event.html/${event.id}"><div class= "column event" style="background-image: url('${event.eventPicture}')">
   <p class="date">${event.startingTime}</p>
   <h2 class="title">${event.title}</h2>
   </div>

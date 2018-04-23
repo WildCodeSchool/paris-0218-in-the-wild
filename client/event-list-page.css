@@ -32,18 +32,20 @@ span{
 
 
 .title{
-  position:absolute;
-  bottom: 0px;
+  /*position:absolute;*/
+  /*bottom: 0px;*/
   font-size: 2rem;
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: 'eventsFont';
 }
 
 .date{
-  position:absolute;
-  bottom: 30px;
+  /*position:absolute;*/
+  /*bottom: 30px;*/
   font-size: 1.5rem;
-  color:white;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: 'eventsFont';
 }
 
@@ -69,12 +71,23 @@ span{
 .columnss {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  /*width: 100%;*/
   padding-top: 10rem;
+  
 }
 
-.columnss div {
-  width: 48%;
-  padding: 3rem;
+.columnss .event {
+  /*width: 48%;*/
+  /*padding: 3rem;*/
+  width: 25rem;
+  margin: 2rem;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.event{
+  /*height: 15rem;*/
+  
 }

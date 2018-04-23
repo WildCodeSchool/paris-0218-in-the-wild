@@ -1,7 +1,7 @@
 {
 	"id": 4,
 	"title": "Friday break",
-	"eventPicture": "String",
+	"eventPicture": "http://today.wecook.fr/wp-content/uploads/2015/08/vin_et_fromage.jpg",
 	"description": "Enfin le we",
 	"category": "boire-un-coup",
 	"location":"Paris",
