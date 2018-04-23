@@ -1,6 +1,6 @@
 let currentTab = 0 // Current tab is set to be the first tab (0)
-const prevBtn = document.getElementById('prevBtn')
-const nextBtn = document.getElementById('nextBtn')
+const prevBtn = document.getElementById('prev-btn')
+const nextBtn = document.getElementById('next-btn')
 
 const validateForm = () => {
   // This function deals with validation of the form fields
@@ -39,7 +39,7 @@ const nextPrev = (n) => {
   // if you have reached the end of the form... :
   if (currentTab >= tab.length) {
     // ...the form gets submitted:
-    document.getElementById('regForm').submit()
+    document.getElementById('reg-form').submit()
     return false
   }
   // Otherwise, display the correct tab:

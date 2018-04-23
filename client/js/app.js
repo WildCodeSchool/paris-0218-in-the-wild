@@ -1,10 +1,9 @@
 import {createNewEvent} from './components/event.js'
 import {showCategory} from './components/show-category.js'
 import {createHeader} from './components/nav.js'
-import {form} from './components/eventProposition.js'
-/*import {createnavbar} from './components/nav.js'*/
-import { init } from './eventProposition/eventForm.js'
-
+// import {form} from './components/eventProposition.js'
+// import {createnavbar} from './components/nav.js'
+// import { init } from './eventProposition/eventForm.js'
 
 /* global fetch */
 fetch('http://localhost:3248/events/Boire')
