@@ -1,5 +1,5 @@
-import {createNewEvent} from './components/event.js'
 import {createHeader} from './components/nav.js'
+import {createEventDetail} from './components/createEventDetail.js'
 
 const params = new URLSearchParams(window.location.search)
 
@@ -14,8 +14,8 @@ fetch(`http://localhost:3248/events/${id}`)
   .then(res => res.json())
   .then(event => {
     const eventElement = document.getElementById('event')
-    console.log(event, createNewEvent(event))
-    eventElement.innerHTML = createNewEvent(event)
+    console.log(event, createEventDetail(event))
+    eventElement.innerHTML = createEventDetail(event)
   })
 
 
