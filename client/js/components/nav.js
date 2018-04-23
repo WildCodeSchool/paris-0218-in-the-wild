@@ -34,9 +34,9 @@ const visuals = (pic, link) => `
 `
 export const createSidebar = param => `
   <ul>
-    ${visuals("visual-one", "?category=get-together")}
-    ${visuals("visual-two", "?category=boire-un-coup")}
-    ${visuals("visual-three", "?category=cours-de-soutien")}
-    ${visuals("visual-four", "?category=live-coding")}
+    ${visuals('visual-one', '?category=get-together')}
+    ${visuals('visual-two', '?category=boire-un-coup')}
+    ${visuals('visual-three', '?category=cours-de-soutien')}
+    ${visuals('visual-four', '?category=live-coding')}
   </ul>
 `
