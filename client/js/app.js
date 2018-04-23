@@ -1,8 +1,14 @@
 import {createNewEvent} from './components/event.js'
 import {showCategory} from './components/show-category.js'
 import {createHeader} from './components/nav.js'
+<<<<<<< HEAD
 
 const params = new URLSearchParams(window.location.search)
+=======
+// import {form} from './components/eventProposition.js'
+// import {createnavbar} from './components/nav.js'
+// import { init } from './eventProposition/eventForm.js'
+>>>>>>> event-form-page
 
 const category = params.get('category')
 
