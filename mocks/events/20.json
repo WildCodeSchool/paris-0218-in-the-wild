@@ -1,0 +1,13 @@
+{
+  "id": 20,
+  "title": "copier un fichier avec la console",
+  "eventPicture": "String",
+  "description": "niveau avancé",
+  "category": "live-coding",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

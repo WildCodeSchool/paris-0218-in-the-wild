@@ -1,17 +1,29 @@
-const express = require('express')
-// require des Mocks Boire un coup
-const category1 = require('../mocks/categories/category1.json')
-const category2 = require('../mocks/categories/category2.json')
-const category3 = require('../mocks/categories/category3.json')
-const eventBoire1 = require('../mocks/events/Boire/1.json')
-const eventBoire2 = require('../mocks/events/Boire/2.json')
-const eventBoire3 = require('../mocks/events/Boire/3.json')
-const eventBoire4 = require('../mocks/events/Boire/4.json')
-const eventBoire5 = require('../mocks/events/Boire/5.json')
-const eventBoire6 = require('../mocks/events/Boire/6.json')
+const fs = require('fs')
+const path = require('path')
+const util = require('util')
 
-const boireEvents = [eventBoire1, eventBoire2, eventBoire3, eventBoire4, eventBoire5, eventBoire6]
-const categories = [category1, category2, category3]
+const express = require('express')
+
+const readdir = util.promisify(fs.readdir)
+const readFile = util.promisify(fs.readFile)
+const isJSON = str => str.endsWith('.json')
+
+const readDirFileContents = dirPath => readdir(dirPath)
+  .then(filenames => {
+    const filepaths = filenames
+      .filter(isJSON)
+      .map(filename => path.join(dirPath, filename))
+    const files = filepaths.map(filepath => readFile(filepath, 'utf8'))
+
+    return Promise.all(files)
+  })
+  .then(filesInJSON => filesInJSON.map(JSON.parse))
+
+const readMockFolder = mockDir =>
+  readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
+
+readMockFolder('events').then(console.log, console.error)
+
 const app = express()
 
 app.use((request, response, next) => {
@@ -24,12 +36,37 @@ app.get('/', (request, response) => {
   response.send('Ok')
 })
 
-app.get('/events/Boire', (request, response) => {
-  response.json(boireEvents)
+app.get('/events/category/:category', (request, response, next) => {
+  readMockFolder('events')
+    .then(events => {
+      const selectedEvents = events
+        .filter(event => event.category === request.params.category)
+
+      response.json(selectedEvents)
+    })
+    .catch(next)
 })
 
-app.get('/categories', (request, response) => {
-  response.json(categories)
+app.get('/events/:id', (request, response, next) => {
+  const filename = `${request.params.id}.JSON`
+  const filepath = path.join(__dirname, '../mocks/events', filename)
+
+  // 1 - lit le fichier
+  // 2 - response.header définit les bons headers
+  // 3 - response.send envoie le résultat
+
+  readFile(filepath)
+    .then(buffer => {
+      response.header('Content-Type', 'application/json')
+      response.send(buffer)
+    })
+    .catch(next)
+})
+
+app.get('/categories', (request, response, next) => {
+  readMockFolder('categories')
+    .then(categories => response.json(categories))
+    .catch(next)
 })
 
 // app.post('/eventProposition', (request, response) => {

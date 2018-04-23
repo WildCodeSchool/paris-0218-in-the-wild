@@ -1,0 +1,13 @@
+{
+	"id": 4,
+	"title": "Friday break",
+	"eventPicture": "String",
+	"description": "Enfin le we",
+	"category": "boire-un-coup",
+	"location":"Paris",
+	"createdBy": "User.id",
+	"attendees": "Array of User.id",
+	"createdAt": "Date",
+	"startingTime": "Date",
+	"endingTime": "Date"
+}

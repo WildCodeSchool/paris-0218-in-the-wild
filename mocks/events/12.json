@@ -1,0 +1,13 @@
+{
+  "id": 12,
+  "title": "React",
+  "eventPicture": "String",
+  "description": "Introduction",
+  "category": "cours-de-soutien",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
