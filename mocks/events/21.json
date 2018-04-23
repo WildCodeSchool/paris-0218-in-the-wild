@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 21,
+  "title": "créer un dossier avec vos fichiers dedans",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "coding en live",
+  "category": "live-coding",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

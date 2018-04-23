@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulaire</title>
+
+  <!--Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/c'>
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+  <header id="header"></header>
+  <section id="main">
+    <nav id="sidebar" class="contain-item"></nav>
+
+    <!--form begin -->
+      <form id="regForm" method="POST">
+        <div class="container">
+          <form action="action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lsname" name="lastname" placeholder="Your last name...">
+            <label for="lname">Username</label>
+            <input type="text" id="Username" name="lastname" placeholder="Your username...">
+            <label for="mail">Email</label>
+            <input type="email" id="mailing" name="lastname" placeholder="Your email...">
+            <label for="country">School</label>
+            <select id="country" name="country">
+              <option value="choose">Choose...</option>
+              <option value="city">Paris</option>
+              <option value="city">Marseille</option>
+              <option value="city">Toulouse</option>
+              <option value="city">Biarritz</option>
+              <option value="city">La loupe</option>
+              <option value="city">Bordeaux</option>
+              <option value="city">Lille</option>
+              <option value="city">Strasbourg</option>
+              <option value="city">Reims</option>
+              <option value="city">Tours</option>
+            </select>
+            <label for="fname">Create Your Passeword </label>
+            <input type="password" id="password" name="firstname" placeholder="Your passeword...">
+            <label for="lname">Confirm your Password</label>
+            <input type="password" id="yourpass" name="lastname" placeholder="Your passeword...">
+            <input type="submit" value="post">
+          </form>
+        </div>
+
+  </section>
+  
+  <script type="text/javascript" src="form.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

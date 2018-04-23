@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 9,
+  "title": "construire une bombe en JS",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "niveau débutant",
+  "category": "cours-de-soutien",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

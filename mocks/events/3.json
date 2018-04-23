@@ -1,8 +1,8 @@
 {
-	"id": 2,
-	"title": "JS Je soufffe",
+	"id": 3,
+	"title": "Friday break",
 	"eventPicture": "String",
-	"description": "Boire boire boire",
+	"description": "Enfin le we",
 	"category": "boire-un-coup",
 	"location":"Paris",
 	"createdBy": "User.id",

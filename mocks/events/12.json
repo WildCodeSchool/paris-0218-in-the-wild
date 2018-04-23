@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 12,
+  "title": "React",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "Introduction",
+  "category": "cours-de-soutien",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",

@@ -1,9 +1,9 @@
 {
-  "id": 1,
-  "title": "Se détendre",
+  "id": 22,
+  "title": "coding de Google",
   "eventPicture": "String",
-  "description": "Au bar pépère",
-  "category": "boire-un-coup",
+  "description": "dans cette présentation live pour débutants, nous recoderons le moteur de recherche Google",
+  "category": "live-coding",
   "location": "Location",
   "createdBy": "User.id",
   "attendees": "Array of User.id",
