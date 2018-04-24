@@ -1,7 +1,7 @@
 {
   "id": 15,
   "title": "HTML, wtf is it?",
-  "eventPicture": "String",
+  "eventPicture": "http://s3.amazonaws.com/content.officeleasecenter.com/production/ckeditor_assets/pictures/1672/original_codecademy.jpg",
   "description": "finalement, on en sait peu",
   "category": "get-together",
   "location": "Location",

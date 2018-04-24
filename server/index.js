@@ -89,13 +89,12 @@ app.get('/events/category/:category', (request, response, next) => {
 })
 
 app.get('/events/:id', (request, response, next) => {
-  const filename = `${request.params.id}.JSON`
+  const filename = `${request.params.id}.json`
   const filepath = path.join(__dirname, '../mocks/events', filename)
 
   // 1 - lit le fichier
   // 2 - response.header définit les bons headers
   // 3 - response.send envoie le résultat
-
   readFile(filepath)
     .then(buffer => {
       response.header('Content-Type', 'application/json')

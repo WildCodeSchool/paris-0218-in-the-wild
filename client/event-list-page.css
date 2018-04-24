@@ -4,108 +4,87 @@
 }
 
 @font-face {
-    font-family: 'eventsFont';
-    src: url('fonts/avenir/AEH.ttf');
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
 }
 
-img{	
-	position: fixed;
-	height: 40rem;
-	opacity: 0.3;
-	padding-top: 10rem;
+img{  
+  position: fixed;
+  height: 40rem;
+  opacity: 0.3;
+  padding-top: 10rem;
 }
 
 .section-name{
-	position: fixed;
-	padding-top: 12vh;
-	margin-left: 25%;
-	font-family: 'eventsFont';
-	color: black;
-	font-size: 4vw;
+  position: fixed;
+  padding-top: 12vh;
+  margin-left: 25%;
+  font-family: 'eventsFont';
+  color: black;
+  font-size: 4vw;
 
 }
 
 span{
-	font-family: 'titleFont';
-	font-size: 3vw;
+  font-family: 'titleFont';
+  font-size: 3vw;
 }
 
-.event1{
-	position: relative;
-	height: 180px;
-	margin: 5vw;
-	background-image: url("images/lebo.jpg");
-	background-size: cover;
-}
-
-.event2{
-	position: relative;
-	height: 180px;
-	margin: 5vw;
-	background-image: url("images/marmotte.jpg");
-	background-size: cover;
-}
-
-.event3{
-	position: relative;
-	height: 180px;
-	height: auto;
-	margin: 5vw;
-	background-image: url("images/party.jpg");
-	background-size: cover;
-}
-
-.event{
-	position: relative;
-	height: 180px;
-	background-image: url("images/lebo.jpg");
-	background-size: cover;
-}
 
 .title{
-	position:absolute;
-	bottom: 0px;
-	font-size: 2rem;
-	color: white;
-	font-family: 'eventsFont';
+  /*position:absolute;*/
+  /*bottom: 0px;*/
+  font-size: 2rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'eventsFont';
 }
 
 .date{
-	position:absolute;
-	bottom: 30px;
-	font-size: 1.5rem;
-	color:white;
-	font-family: 'eventsFont';
+  /*position:absolute;*/
+  /*bottom: 30px;*/
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'eventsFont';
 }
 
 .btn{
-	margin-top: 90vh;
-	margin-left: 10vw;
-	position:fixed;
+  margin-top: 90vh;
+  margin-left: 10vw;
+  position:fixed;
 }
 
 .button{
-	background-color: #22B573;
-	border: none;
-	color: white;
-	font-family: 'eventsFont';
+  background-color: #22B573;
+  border: none;
+  color: white;
+  font-family: 'eventsFont';
 }
 
 .button.button-outline{
-	background-color: #E6E6E6;
-	color: white;
-	font-family: 'eventsFont';
+  background-color: #E6E6E6;
+  color: white;
+  font-family: 'eventsFont';
 }
 
 .columnss {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  /*width: 100%;*/
   padding-top: 10rem;
+  
 }
 
-.columnss div {
-	width: 48%;
-	padding: 3rem;
+.columnss .event {
+  /*width: 48%;*/
+  /*padding: 3rem;*/
+  width: 25rem;
+  margin: 2rem;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+

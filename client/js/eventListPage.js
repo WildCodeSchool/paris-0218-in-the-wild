@@ -37,6 +37,32 @@ if (!category) {
   // rediriger vers la page d'accueil
 }
 
+<<<<<<< HEAD:client/js/eventListPage.js
+// console.log({ category })
+
+fetch('http://localhost:3248/categories')
+  .then(res => res.json())
+  .then(categories => {
+    // categories.map(categoryLink).join('')
+    const eventCategory = document.getElementById('category')
+    const matchedCategory = categories
+      .find(cat => cat.normalizedTitle === category)
+    const eventCategories = showCategory(matchedCategory)
+    eventCategory.innerHTML = eventCategories
+  })
+
+/* global fetch */
+fetch(`http://localhost:3248/events/category/${category}`)
+  .then(res => res.json())
+  .then(events => {
+    const eventElement = document.getElementById('event')
+    const eventElements = events.map(createNewEvent).join('')
+    console.log({ events, eventElements })
+    eventElement.innerHTML = eventElements
+  })
+
+=======
+>>>>>>> dev:client/js/app.js
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
