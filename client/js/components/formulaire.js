@@ -12,6 +12,9 @@ if (!category) {
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+const sideEl = document.getElementById('sidebar')
+sideEl.innerHTML = createSidebar({})
+
 
 document.getElementById('regForm').addEventListener('submit', event => {
   event.preventDefault()
@@ -39,6 +42,5 @@ document.getElementById('regForm').addEventListener('submit', event => {
     .then(res => console.log(res.status, res.statusCode))
 })
 
-const sideEl = document.getElementById('sidebar')
-sideEl.innerHTML = createSidebar({})
+
 

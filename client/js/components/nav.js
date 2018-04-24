@@ -20,7 +20,7 @@ export const createHeader = props => `
   <nav>
     ${profil(props)}
     ${action('JE PARTICIPE', '#')}
-    ${action('JE PROPOSE', '#')}
+    ${action('JE PROPOSE', 'eventProposition.html')}
     ${topBarLogo()}
   </nav>
 `
@@ -34,9 +34,9 @@ const visuals = (pic, link) => `
 `
 export const createSidebar = param => `
   <ul>
-    ${visuals('visual-one', '?category=get-together')}
-    ${visuals('visual-two', '?category=boire-un-coup')}
-    ${visuals('visual-three', '?category=cours-de-soutien')}
-    ${visuals('visual-four', '?category=live-coding')}
+    ${visuals('visual-one', 'event-list-page.html?category=get-together')}
+    ${visuals('visual-two', 'event-list-page.html?category=boire-un-coup')}
+    ${visuals('visual-three', 'event-list-page.html?category=cours-de-soutien')}
+    ${visuals('visual-four', 'event-list-page.html?category=live-coding')}
   </ul>
 `

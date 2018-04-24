@@ -10,6 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
+    "g": "^2.0.1",
+    "nodemon": "^1.17.3",
     "travis": "^0.1.1"
   }
 }

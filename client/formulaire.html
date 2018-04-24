@@ -1,88 +1,59 @@
 <!DOCTYPE>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Formulaire</title>
-
-  <!--Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Bitter" rel="styleshee" type="text/c">
-  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-
-  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-
-  <link rel="stylesheet" href="form.css">
-  <link rel="stylesheet" href="nav.css">
-</head>
-
-<body>
-  <header id="header"></header>
-  <section id="main">
-
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <!--Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Bitter" rel="styleshee" type="text/c">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+<!--     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+     -->
+    <link rel="stylesheet" href="./css/form.css">
+     
+    <link rel="stylesheet" href="./css/nav.css">
+  </head>
+  <body>
+    <header id="header"></header>
+    <section id="main">
       <nav id="sidebar" class="contain-item"></nav>
-   
+      <main>
+          <div class="flex-container"> 
+            <form id="regForm">
+              <div class="container">
 
-    <!--form begin -->
-    <section>
-      <form id="regForm">
+                <label>First Name<input type="text" id="fname" name="firstname" placeholder="Your name..."></label>
+                <label>Last Name<input type="text" id="lsname" name="lastname" placeholder="Your last name..."></label>
+                <label>Username<input type="text" id="Username" name="username" placeholder="Your username..."></label>
+                <label>Email</label>
+                <input type="email" id="mailing" name="email" placeholder="Your email...">
+              </label>
+              <label>
+                School
+                <select id="school" name="schoolist">
+                  <option value="choose">Choose...</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Marseille">Marseille</option>
+                  <option value="Toulouse">Toulouse</option>
+                  <option value="Biarritz">Biarritz</option>
+                  <option value="La loupe">La loupe</option>
+                  <option value="Bordeaux">Bordeaux</option>
+                  <option value="Lille">Lille</option>
+                  <option value="Strasbourg">Strasbourg</option>
+                  <option value="Reims">Reims</option>
+                  <option value="Tours">Tours</option>
+                </select>
+              </label>
+              <label>Create Your Password<input type="password" id="password" name="pass" placeholder="Your password..."></label>
+              <label>Confirm your Password<input type="password" id="yourpass" name="yourpass" placeholder="Your passeword..."></label>
+              <input type="submit" value="post">
+              </div>
+            </form>
 
-        <div class="container">
-          <form>
-            <label>First Name
-            <input type="text" id="fname" name="firstname" placeholder="Your name...">
-
-           </label>
-
-            <label>Last Name
-            <input type="text" id="lsname" name="lastname" placeholder="Your last name...">
-            </label>
-
-            <label>Username
-            <input type="text" id="Username" name="username" placeholder="Your username...">
-          </label>
-
-            <label>Email</label>
-            <input type="email" id="mailing" name="email" placeholder="Your email...">
-          </label>
-
-            <label>School
-            <select id="school" name="schoolist">
-
-              <option value="choose">Choose...</option>
-              <option value="Paris">Paris</option>
-              <option value="Marseille">Marseille</option>
-              <option value="Toulouse">Toulouse</option>
-              <option value="Biarritz">Biarritz</option>
-              <option value="La loupe">La loupe</option>
-              <option value="Bordeaux">Bordeaux</option>
-              <option value="Lille">Lille</option>
-              <option value="Strasbourg">Strasbourg</option>
-              <option value="Reims">Reims</option>
-              <option value="Tours">Tours</option>
-            </select>
-
-            </label>
-
-            <label>Create Your Password 
-            <input type="password" id="password" name="pass" placeholder="Your password...">
-            </label>
-
-            <label>Confirm your Password
-            <input type="password" id="yourpass" name="yourpass" placeholder="Your passeword...">
-          </label>
-
-
-            <input type="submit" value="post">
-          </form>
-        </div>
-    </form>
-
+          </div>
+    </main>
   </section>
-  
-
-  <script type="module" src="./js/components/formulaire.js"></script>
-</body>
-
+    <script type="module" src="./js/components/formulaire.js"></script>
+  </body>
 </html>
