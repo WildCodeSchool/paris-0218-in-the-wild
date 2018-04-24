@@ -2,22 +2,6 @@ html, body {
   min-height: 100vh;
 }
 
-/*body {
-  margin: 0;
-  color: #151515;
-  display: flex;
-  flex-direction: column;
-}
-*/
-/*.row {
-  border-bottom: 4px solid #22B573;
-  height: 10rem;
-}*/
-
-/*.column.column-10 {
-  border-right: 4px solid #22B573;
-}*/
-
 /*** La police 👮 ***/
 
 @font-face {
@@ -32,11 +16,10 @@ html, body {
   src: url('fonts/Freight_Big_Book_Italic.otf');
 }
 
-
 /*Freight Text alternative Sumana or Jua*/
 /*Futura alternative Muli*/
 
-h4 {
+h4.title1 {
   font-weight: 600;
   font-family: 'Muli', sans-serif;
   font-style: italic;
@@ -48,25 +31,18 @@ h4 {
   margin: 0;
 }
 
-/*JE PROPOSE*/
-
-/*.prop {
-  position: relative;
-  left: 27vw;
-  padding-left: 0;
-  text-align: left;
-}*/
-
 /*ITW*/
 
 .itw {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 800;
+  color: black;
+  margin: 0;
 }
 
 /*Le W de ITW*/
 
-span {
+span .big-w {
   font-family: 'titleFont';
   font-style: italic;
   color: #151515;
@@ -75,41 +51,62 @@ span {
 
 /*Les liens JE PARTICIPE JE PROPOSE*/
 
-/*a:link {
-  color: black;
-}
-*/
 a:visited {
   color: black;
 }
 
-h4:hover{
+h4.title1:hover{
   background-image:linear-gradient(180deg,transparent 50%,#56B278 0);
   background-repeat: no-repeat; 
 }
 
-/*Sidebar*/
-/*.sidebar {
-  border-right: 4px solid #22B573;
-  width: 174px;
-  height: 100%;
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 10px;
-}*/
+/* Les éléments de la sidebar */
+
+ul {
+  padding: 0;
+  margin: 0;
+}
 
 li {
   list-style: none;
-  position: relative;
-  left: 1.5rem;
 }
 
-/*.logo {
-  position: relative;
-  left: 30px;
-  top: 2px;
+nav#sidebar.contain-item {
+  padding: 0;
+  width: 13.2rem;
+  flex-shrink: 0;
+}
+
+/*a[class| = "visual"] {
 }*/
+
+a.visual-one {
+  width:100%;
+  height:100%;
+/*  width: 200px;*/
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png");
+  background-repeat: no-repeat;
+  /*background-size: 200px;*/
+}
+
+a.visual-two {
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524093506-sortie.gif");
+  background-repeat: no-repeat;
+}
+
+a.visual-three {
+  height: 93px;
+  width: 200px;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094338-nope.png");
+  background-repeat: no-repeat;
+}
+
+a.visual-four {
+  height: 93px;
+  width: 200px;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094882-mat.png");
+  background-repeat: no-repeat;
+}
 
 header nav.row {
   margin-left: 0
@@ -158,22 +155,3 @@ header nav a {
   display: block;
   height: 12.5rem;
 }
-
-
-/** {
-  padding: 5px;
-  margin: 5px;
-  border: 1px solid;
-  background: #00000020;
-}
-*/
-
-/**Media Queries*
-*/
-/*@media (min-width: 40rem){
-  .row {
-    flex-direction: row;
-    margin-left: -1.0rem;
-    width: 100%;
-  }
-}*/
