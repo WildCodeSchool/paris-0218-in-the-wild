@@ -1,8 +1,8 @@
 {
-	"id": 2,
-	"title": "JS Je souffre",
-	"eventPicture": "https://m.static.lagardere.cz/frekvence1/shutterstock-139152893.jpg",
-	"description": "Boire boire boire",
+	"id": 6,
+	"title": "Friday break",
+	"eventPicture": "String",
+	"description": "Enfin le we",
 	"category": "boire-un-coup",
 	"location":"Paris",
 	"createdBy": "User.id",

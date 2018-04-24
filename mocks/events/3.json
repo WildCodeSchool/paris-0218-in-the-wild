@@ -1,0 +1,13 @@
+{
+	"id": 3,
+	"title": "Friday break",
+	"eventPicture": "http://www.parisfaitsoncinema.com/cache/media/jeff-bridges-the-big-lebowski-white-russian-cocktail-cinema/cr%2C640%2C450-c3a852.jpg",
+	"description": "Enfin le we",
+	"category": "boire-un-coup",
+	"location":"Paris",
+	"createdBy": "User.id",
+	"attendees": "Array of User.id",
+	"createdAt": "Date",
+	"startingTime": "Date",
+	"endingTime": "Date"
+}

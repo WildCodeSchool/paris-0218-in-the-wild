@@ -1,8 +1,8 @@
 {
-	"id": 2,
-	"title": "JS Je souffre",
-	"eventPicture": "https://m.static.lagardere.cz/frekvence1/shutterstock-139152893.jpg",
-	"description": "Boire boire boire",
+	"id": 4,
+	"title": "Friday break",
+	"eventPicture": "http://today.wecook.fr/wp-content/uploads/2015/08/vin_et_fromage.jpg",
+	"description": "Enfin le we",
 	"category": "boire-un-coup",
 	"location":"Paris",
 	"createdBy": "User.id",

@@ -1,0 +1,13 @@
+{
+  "id": 10,
+  "title": "mettre en place un serveur",
+  "eventPicture": "String",
+  "description": "un serveur ou une serveuse",
+  "category": "cours-de-soutien",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
