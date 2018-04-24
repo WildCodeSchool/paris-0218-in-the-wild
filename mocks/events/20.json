@@ -1,7 +1,7 @@
 {
   "id": 20,
   "title": "copier un fichier avec la console",
-  "eventPicture": "String",
+  "eventPicture": "http://www.ianbicking.org/static/media/khan-screenshot.png",
   "description": "niveau avancé",
   "category": "live-coding",
   "location": "Location",
