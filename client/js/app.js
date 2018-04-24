@@ -33,7 +33,5 @@ fetch(`http://localhost:3248/events/category/${category}`)
     eventElement.innerHTML = eventElements
   })
 
-
-
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})

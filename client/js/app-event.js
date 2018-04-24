@@ -18,7 +18,5 @@ fetch(`http://localhost:3248/events/${id}`)
     eventElement.innerHTML = createEventDetail(event)
   })
 
-
-
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
