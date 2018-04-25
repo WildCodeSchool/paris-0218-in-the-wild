@@ -8,7 +8,7 @@
   src: url('fonts/avenir/AEH.ttf');
 }
 
-img{  
+.gif{  
   position: fixed;
   height: 40rem;
   opacity: 0.3;
@@ -68,23 +68,21 @@ span{
   font-family: 'eventsFont';
 }
 
-.columnss {
+.event-bloc {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*width: 100%;*/
   padding-top: 10rem;
   
 }
 
-.columnss .event {
-  /*width: 48%;*/
-  /*padding: 3rem;*/
-  width: 25rem;
+.event {
+ width: 20rem;
   margin: 2rem;
   height: 15rem;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 

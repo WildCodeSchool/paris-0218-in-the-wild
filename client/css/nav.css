@@ -5,16 +5,15 @@ html, body {
 /*** La police 👮 ***/
 
 @font-face {
-  font-family: 'Freight_Big_Book_Italic';
-  src: url('Freight_Big_Book_Italic.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'titleFont';
   src: url('fonts/Freight_Big_Book_Italic.otf');
 }
+
+@font-face {
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
+}
+
 
 /*Freight Text alternative Sumana or Jua*/
 /*Futura alternative Muli*/
@@ -35,7 +34,8 @@ h4.title1 {
 
 .itw {
   font-size: 7rem;
-  font-weight: 800;
+  font-weight: bold;
+  /*font-family: titleFont;*/
   color: black;
   margin: 0;
 }
@@ -83,27 +83,32 @@ nav#sidebar.contain-item {
 a.visual-one {
   width:100%;
   height:100%;
-/*  width: 200px;*/
+  width: 12,8rem;
   background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png");
+  background-size: cover;
   background-repeat: no-repeat;
   /*background-size: 200px;*/
 }
 
 a.visual-two {
+  width: 12,8rem;
   background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524093506-sortie.gif");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a.visual-three {
-  height: 93px;
-  width: 200px;
+  /*height: 93px;
+  width: 200px;*/
+  background-size: cover;
   background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094338-nope.png");
   background-repeat: no-repeat;
 }
 
 a.visual-four {
-  height: 93px;
-  width: 200px;
+/*  height: 93px;
+  width: 200px;*/
+  background-size: cover;
   background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094882-mat.png");
   background-repeat: no-repeat;
 }
@@ -140,6 +145,7 @@ header nav a {
 #main {
   display: flex;
   flex-grow: 1;
+  height:100%;
 }
 
 /*#main section {
@@ -150,6 +156,7 @@ header nav a {
   width: 13.2rem;
   border-right: 0.7rem solid #22B573;
 }
+
 
 #main nav a {
   display: block;

@@ -1,10 +1,7 @@
 export const showCategory = (category) =>
-  `
-  <div class="row bloc">
-  <div class="column image-bloc">
+`
+  <div>
   <p class="section-name"><span>${category.description[0]}</span> <br>${category.description[1]}</p>
-  <img src="${category.categoryPicture}" alt="gif category">
-
-</div>
-</div>
+  <img class="gif" src="${category.categoryPicture}" alt="gif category">
+  </div>
 `
