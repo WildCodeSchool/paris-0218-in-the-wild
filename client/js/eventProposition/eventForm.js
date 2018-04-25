@@ -4,18 +4,15 @@ const nextBtn = document.getElementById('next-btn')
 
 const validateForm = () => {
   // This function deals with validation of the form fields
-  let tab = true
-  let input = true
-  let i = true
   let valid = true
-  tab = document.getElementsByClassName('tab')
-  input = tab[currentTab].getElementsByTagName('input')
+  const tab = document.getElementsByClassName('tab')
+  const inputs = tab[currentTab].getElementsByTagName('input')
   // A loop that checks every input field in the current tab:
-  for (i = 0; i < input.length; i++) {
+  for (const inp of inputs) {
     // If a field is empty...
-    if (input[i].value === '') {
+    if (inp.value === '') {
       // add an 'invalid' class to the field:
-      input[i].classList.add('invalid')
+      inp.classList.add('invalid')
       // and set the current valid status to false:
       valid = false
     }
@@ -27,24 +24,26 @@ const validateForm = () => {
   return valid // return the valid status
 }
 
-const nextPrev = (n) => {
-  // This function will figure out which tab to display
-  let tab = document.getElementsByClassName('tab')
-  // Exit the function if any field in the current tab is invalid:
-  if (n === 1 && !validateForm()) return false
-  // Hide the current tab:
-  tab[currentTab].style.display = 'none'
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n
-  // if you have reached the end of the form... :
-  if (currentTab >= tab.length) {
+const selectTab = tabIndex => {
+  const tabs = document.getElementsByClassName('tab')
+  tabs[currentTab].style.display = 'none'
+  currentTab = tabIndex
+  if (currentTab >= tabs.length) {
     // ...the form gets submitted:
     document.getElementById('reg-form').submit()
     return false
   }
-  // Otherwise, display the correct tab:
   showTab(currentTab)
 }
+
+const prev = () => selectTab(currentTab - 1)
+const next = () => {
+  if (!validateForm()) return false
+  return selectTab(currentTab + 1)
+}
+
+
+
 
 const fixStepIndicator = (n) => {
   // This function removes the 'active' class of all steps...
@@ -59,22 +58,18 @@ const fixStepIndicator = (n) => {
 
 const showTab = (n) => {
   const tab = document.getElementsByClassName('tab')
-  console.log(tab)
 
   if (n === 0) {
-    prevBtn.style.display = 'none'
+    prevBtn.style.visibility = 'hidden'
   } else {
-    prevBtn.style.display = 'inline'
+    prevBtn.style.visibility = ''
   }
   if (n === (tab.length - 1)) {
-    nextBtn.innerHTML = 'Submit'
+    nextBtn.textContent = 'Submit'
   } else {
-    nextBtn.innerHTML = '>'
+    nextBtn.textContent = '>'
   }
 
-  console.log({
-    n
-  })
 
   tab[n].style.display = 'block'
 
@@ -83,8 +78,12 @@ const showTab = (n) => {
 }
 
 export const init = () => {
-  prevBtn.addEventListener('click', () => nextPrev(-1))
-  nextBtn.addEventListener('click', () => nextPrev(1))
+  prevBtn.addEventListener('click', prev)
+  nextBtn.addEventListener('click', next)
+  const inputs = document.querySelectorAll('.tab input')
+  for (const inp of inputs) {
+    inp.addEventListener('input', ev => ev.target.classList.remove('invalid'))
+  }
   showTab(currentTab)
 }
 
