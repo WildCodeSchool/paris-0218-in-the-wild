@@ -1,3 +1,5 @@
+
+
 let currentTab = 0 // Current tab is set to be the first tab (0)
 const prevBtn = document.getElementById('prev-btn')
 const nextBtn = document.getElementById('next-btn')
@@ -29,8 +31,29 @@ const selectTab = tabIndex => {
   tabs[currentTab].style.display = 'none'
   currentTab = tabIndex
   if (currentTab >= tabs.length) {
-    // ...the form gets submitted:
-    document.getElementById('reg-form').submit()
+    console.log(test)
+    document.getElementById('reg-form').addEventListener('submit', event => {
+      event.preventDefault()
+      const title = document.getElementById('title')
+      const location = document.getElementById('location')
+      const startingTime = document.getElementById('startingTime')
+      const description = document.getElementById('description')
+      const category = document.getElementById('category')
+
+      const form = {
+        title: title.value,
+        location: location.value,
+        startingTime: startingTime.value,
+        description: description.value,
+        category: category.value,
+      }
+
+      fetch('http://localhost:3248/events', {
+        method: 'post',
+        body: JSON.stringify(form)
+      })
+    .then(res => console.log(res.status, res.statusCode))
+  })
     return false
   }
   showTab(currentTab)
@@ -88,3 +111,5 @@ export const init = () => {
 }
 
 init()
+
+
