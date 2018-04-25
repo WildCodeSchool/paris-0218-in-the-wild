@@ -14,9 +14,12 @@ label
   font-family: 'Asap', sans-serif;
 }
 
+.flex-container {
+/*margin-left: 40%;*/
+}
+
 .container
 {
-  
   position: relative;
   bottom: 12rem;
   border-radius: 5px;
@@ -26,7 +29,7 @@ label
   -webkit-box-shadow: 1px 1px 15px 3px #656565;
   -o-box-shadow: 1px 1px 15px 3px #656565;
   box-shadow: 1px 1px 15px 3px #656565;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15); 
 }
 
 input[type=text], select, textarea
@@ -147,4 +150,10 @@ font-size: 15px;
 
 #mailing {
   font-size: 15px;
+}
+
+main{
+  display: flex;
+  width: 80%;
+  justify-content: center;
 }
