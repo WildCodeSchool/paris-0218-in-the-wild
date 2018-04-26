@@ -1,6 +1,7 @@
 import {createNewEvent} from './components/event.js'
 import {showCategory} from './components/show-category.js'
 import {createHeader, createSidebar} from './components/nav.js'
+import {api} from './server.js'
 
 
 const params = new window.URLSearchParams(window.location.search)
@@ -10,8 +11,7 @@ if (!category) {
   // rediriger vers la page d'accueil
 }
 
-fetch('http://localhost:3248/categories')
-  .then(res => res.json())
+api('categories')
   .then(categories => {
     // categories.map(categoryLink).join('')
     const eventCategory = document.getElementById('category')
@@ -21,9 +21,7 @@ fetch('http://localhost:3248/categories')
     eventCategory.innerHTML = eventCategories
   })
 
-/* global fetch */
-fetch(`http://localhost:3248/events/category/${category}`)
-  .then(res => res.json())
+api(`events/category/${category}`)
   .then(events => {
     const eventElement = document.getElementById('event')
     const eventElements = events.map(createNewEvent).join('')
