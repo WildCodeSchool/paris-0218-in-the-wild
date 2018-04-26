@@ -3,12 +3,16 @@ const path = require('path')
 const util = require('util')
 
 const express = require('express')
+const session = require('express-session')
+const sessionFileStore = require('session-file-store')
 
+const FileStore = sessionFileStore(session)
 const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
 const isJSON = str => str.endsWith('.json')
 
+const secret = 'je suis un secret' // voir https://www.youtube.com/watch?v=8BM9LPDjOw0
 const readDirFileContents = dirPath => readdir(dirPath)
   .then(filenames => {
     const filepaths = filenames
@@ -50,6 +54,13 @@ app.use((request, response, next) => {
   })
 })
 
+// Setup session handler
+app.use(session({
+  secret,
+  saveUninitialized: false,
+  resave: true,
+  store: new FileStore({ path: path.join(__dirname, '../sessions'), secret })
+}))
 // Création des routes
 app.get('/', (request, response) => {
   response.send('Ok')
