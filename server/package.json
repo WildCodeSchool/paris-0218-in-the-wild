@@ -10,8 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "g": "^2.0.1",
     "nodemon": "^1.17.3",
+    "session-file-store": "^1.2.0",
     "travis": "^0.1.1"
   }
 }
