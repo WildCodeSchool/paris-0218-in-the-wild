@@ -1,8 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 const util = require('util')
-
+const bodyParser = require('body-parser')
 const express = require('express')
+
+
 
 const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
@@ -26,6 +28,9 @@ const readMockFolder = mockDir =>
 // readMockFolder('events').then(console.log, console.error)
 
 const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:false}))
 
 app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', '*')
@@ -60,7 +65,7 @@ app.post('/users', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
   const filename = `${id}.JSON`
   const filepath = path.join(__dirname, '../mocks/users', filename)
-
+  response.send('it s working')
   const content = {
     id: id,
     firstName: request.body.firstName,

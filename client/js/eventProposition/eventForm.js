@@ -30,36 +30,34 @@ const selectTab = tabIndex => {
   const tabs = document.getElementsByClassName('tab')
   tabs[currentTab].style.display = 'none'
   currentTab = tabIndex
-  if (currentTab >= tabs.length) {
-    console.log(test)
-    document.getElementById('reg-form').addEventListener('submit', event => {
-      event.preventDefault()
-      const title = document.getElementById('title')
-      const location = document.getElementById('location')
-      const startingTime = document.getElementById('startingTime')
-      const description = document.getElementById('description')
-      const category = document.getElementById('category')
 
-      const form = {
-        title: title.value,
-        location: location.value,
-        startingTime: startingTime.value,
-        description: description.value,
-        category: category.value,
-      }
+  if (currentTab < tabs.length) return showTab(currentTab)
 
-      fetch('http://localhost:3248/events', {
-        method: 'post',
-        body: JSON.stringify(form)
-      })
-    .then(res => console.log(res.status, res.statusCode))
-  })
-    return false
+  const title = document.getElementById('title')
+  const location = document.getElementById('location')
+  const startingTime = document.getElementById('startingTime')
+  const description = document.getElementById('description')
+  const category = document.getElementById('category')
+
+  const form = {
+    title: title.value,
+    location: location.value,
+    startingTime: startingTime.value,
+    description: description.value,
+    category: category.value,
   }
-  showTab(currentTab)
+
+  fetch('http://localhost:3248/events', {
+    method: 'post',
+    body: JSON.stringify(form)
+  }).then(res => res.text())
+    .then(body => {
+      /*window.location = */
+      console.log(body)
+    })
 }
 
-const prev = () => selectTab(currentTab - 1)
+const prev = () => selectTab(currentTab)
 const next = () => {
   if (!validateForm()) return false
   return selectTab(currentTab + 1)
@@ -100,7 +98,7 @@ const showTab = (n) => {
   fixStepIndicator(n)
 }
 
-export const init = () => {
+const init = () => {
   prevBtn.addEventListener('click', prev)
   nextBtn.addEventListener('click', next)
   const inputs = document.querySelectorAll('.tab input')
