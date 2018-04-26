@@ -30,3 +30,10 @@
   font-family: eventsFont;
   font-size: 2rem;
 }
+
+.button{
+  background-color: #22B573;
+  border: none;
+  color: white;
+  font-family: 'eventsFont';
+}
