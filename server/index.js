@@ -148,6 +148,13 @@ app.get('/events/:id', (request, response, next) => {
     .catch(next)
 })
 
+app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
+  const currentUserId = request.session.user.id
+  const eventId = request.params.id
+
+  console.log('add', currentUserId, 'to', eventId)
+})
+
 app.get('/categories', (request, response, next) => {
   readMockFolder('categories')
     .then(categories => response.json(categories))
