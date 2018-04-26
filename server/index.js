@@ -66,6 +66,31 @@ app.get('/', (request, response) => {
   response.send('Ok')
 })
 
+app.post('/sign-in', (request, response, next) => {
+  const username = request.body.pseudo
+  const password = request.body.password
+  const redirectTo = request.body.redirectTo || '/homepage.html'
+
+  readMockFolder('users')
+    .then(users => {
+      console.log(users)
+      const userFound = users.find(user => user.pseudo === username)
+      console.log(userFound, { username, password })
+      if (!userFound) {
+        throw Error('User not found')
+      }
+      if (userFound.password !== password) {
+        throw Error('Wrong password')
+      }
+
+      request.session.user = userFound
+      console.log('user', userFound.pseudo, 'connected with great success')
+      response.redirect(redirectTo)
+    })
+    .catch(next)
+
+})
+
 // route formulaire
 app.post('/users', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
