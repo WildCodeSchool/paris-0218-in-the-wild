@@ -1,0 +1,13 @@
+{
+  "id": 21,
+  "title": "créer un dossier avec vos fichiers dedans",
+  "eventPicture": "https://toplap.org/wp-content/uploads/2017/11/troop-screenshot.png",
+  "description": "coding en live",
+  "category": "live-coding",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

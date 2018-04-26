@@ -1,0 +1,13 @@
+{
+  "id": 12,
+  "title": "React",
+  "eventPicture": "http://www.lesenjoliveuses.fr/wp-content/uploads/2012/10/une12-620x295.jpg",
+  "description": "Introduction",
+  "category": "cours-de-soutien",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}

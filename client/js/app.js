@@ -1,3 +1,7 @@
-/* global fetch */
-fetch('http://localhost:3248/events')
-  .then(res => res.json())
+import {createHeader, createSidebar} from './components/nav.js'
+
+const headerEl = document.getElementById('header')
+headerEl.innerHTML = createHeader({})
+
+const sideEl = document.getElementById('sidebar')
+sideEl.innerHTML = createSidebar({})

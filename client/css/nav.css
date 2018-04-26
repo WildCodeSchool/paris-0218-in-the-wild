@@ -1,0 +1,164 @@
+html, body {
+  min-height: 100vh;
+}
+
+/*** La police 👮 ***/
+
+@font-face {
+  font-family: 'titleFont';
+  src: url('fonts/Freight_Big_Book_Italic.otf');
+}
+
+@font-face {
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
+}
+
+
+/*Freight Text alternative Sumana or Jua*/
+/*Futura alternative Muli*/
+
+h4.title1 {
+  font-weight: 600;
+  font-family: 'Muli', sans-serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  text-align: center;
+
+  position: relative;
+  top: 5rem;
+  margin: 0;
+}
+
+/*ITW*/
+
+.itw {
+  font-size: 7rem;
+  font-weight: bold;
+  /*font-family: titleFont;*/
+  color: black;
+  margin: 0;
+}
+
+/*Le W de ITW*/
+
+span .big-w {
+  font-family: 'titleFont';
+  font-style: italic;
+  color: #151515;
+  font-size: 7rem;
+}
+
+/*Les liens JE PARTICIPE JE PROPOSE*/
+
+a:visited {
+  color: black;
+}
+
+h4.title1:hover{
+  background-image:linear-gradient(180deg,transparent 50%,#56B278 0);
+  background-repeat: no-repeat; 
+}
+
+/* Les éléments de la sidebar */
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+nav#sidebar.contain-item {
+  padding: 0;
+  width: 13.2rem;
+  flex-shrink: 0;
+}
+
+/*a[class| = "visual"] {
+}*/
+
+a.visual-one {
+  width:100%;
+  height:100%;
+  width: 12,8rem;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-size: 200px;*/
+}
+
+a.visual-two {
+  width: 12,8rem;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524093506-sortie.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a.visual-three {
+  /*height: 93px;
+  width: 200px;*/
+  background-size: cover;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094338-nope.png");
+  background-repeat: no-repeat;
+}
+
+a.visual-four {
+/*  height: 93px;
+  width: 200px;*/
+  background-size: cover;
+  background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094882-mat.png");
+  background-repeat: no-repeat;
+}
+
+header nav.row {
+  margin-left: 0
+}
+
+header nav {
+  display: flex;
+  border-bottom: 0.7rem solid #22B573;
+}
+
+header nav a {
+  display: block;
+  padding: 0 2rem;
+  flex-grow: 0.5;
+  flex-shrink: 1;
+  color: black;
+}
+
+#header-logo {
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+
+#profil {
+  width: 13.2rem;
+  border-right: 0.7rem solid #22B573;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+#main {
+  display: flex;
+  flex-grow: 1;
+  height:100%;
+}
+
+/*#main section {
+  flex-grow: 1;
+}*/
+
+#main nav {
+  width: 13.2rem;
+  border-right: 0.7rem solid #22B573;
+}
+
+
+#main nav a {
+  display: block;
+  height: 12.5rem;
+}

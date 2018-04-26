@@ -1,0 +1,84 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+  max-width: 100%;
+}
+
+.contain-img-together{
+  width: 50%;
+  opacity: 0.5;
+}
+
+.contain-img-boire{
+  width: 50%;
+  opacity: 0.5;
+}
+
+.contain-img-live{
+  width: 50%;
+}
+
+.contain-img-cours{
+  width: 50%;
+  opacity: 0.5;
+}
+
+
+/* Titre des categories */
+.contain-item h2{
+  font-size :50px;
+  font-family: 'titleFont';
+  font-weight: bold;
+
+}
+
+/* Afficle le nb d'events */
+.events-count{
+
+  background-color:rgb(124, 209, 124);
+  color:white;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius : 50%;
+}
+
+.together{
+  width:70rem;
+  height:50rem;
+  display: flex;
+  margin:0;
+  border-right: 2px solid #22B573;
+  border-bottom: 2px solid #22B573;
+}
+
+.boire{
+  width:70rem;
+  height:50rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:0;
+  border-bottom: 2px solid #22B573;
+}
+
+.live-coding{
+  width:70rem;
+  height:50rem;
+  display: flex;
+  margin:0;
+  border-right: 2px solid #22B573;
+  flex-direction: row-reverse;
+}
+
+.cours{
+  width:70rem;
+  height:50rem;
+  display: flex;
+  margin:0;
+}
+
+

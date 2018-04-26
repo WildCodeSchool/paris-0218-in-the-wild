@@ -1,0 +1,13 @@
+{
+  "id": 9,
+  "title": "construire une bombe en JS",
+  "eventPicture": "http://www.clevelandfoundation100.org/wp-content/uploads/2013/09/IN-GS-01-Classroom.jpg",
+  "description": "niveau débutant",
+  "category": "cours-de-soutien",
+  "location": "Location",
+  "createdBy": "User.id",
+  "attendees": "Array of User.id",
+  "createdAt": "Date",
+  "startingTime": "Date",
+  "endingTime": "Date"
+}
