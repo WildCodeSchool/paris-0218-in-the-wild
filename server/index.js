@@ -32,7 +32,10 @@ const readMockFolder = mockDir =>
 const app = express()
 
 app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*')
+  // Clever, not a good practise though..
+  console.log('headers', request.headers)
+  response.header('Access-Control-Allow-Origin', request.headers.origin)
+  response.header('Access-Control-Allow-Credentials', 'true') // important
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
