@@ -33,6 +33,7 @@ signUpForm.addEventListener('submit', event => {
     .then(res => res.json())
     .then(result => {
       console.log(result)
+      window.location = redirectTo
     })
 })
 

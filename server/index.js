@@ -85,7 +85,7 @@ app.post('/sign-in', (request, response, next) => {
 
       request.session.user = userFound
       console.log('user', userFound.pseudo, 'connected with great success')
-      response.redirect(redirectTo)
+      response.json('ok')
     })
     .catch(next)
 
