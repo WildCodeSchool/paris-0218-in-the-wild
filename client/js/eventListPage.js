@@ -1,4 +1,3 @@
-
 import {createNewEvent} from './components/event.js'
 import {showCategory} from './components/show-category.js'
 import {createHeader, createSidebar} from './components/nav.js'

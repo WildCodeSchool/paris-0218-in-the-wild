@@ -1,5 +1,5 @@
-import {createHeader} from './components/nav.js'
 import {createEventDetail} from './components/createEventDetail.js'
+import {createHeader, createSidebar} from './components/nav.js'
 
 const params = new URLSearchParams(window.location.search)
 
@@ -20,3 +20,7 @@ fetch(`http://localhost:3248/events/${id}`)
 
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
+
+
+const sideEl = document.getElementById('sidebar')
+sideEl.innerHTML = createSidebar({})
