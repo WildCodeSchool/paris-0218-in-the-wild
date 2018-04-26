@@ -94,7 +94,7 @@ app.post('/sign-in', (request, response, next) => {
 // route formulaire
 app.post('/users', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
-  const filename = `${id}.JSON`
+  const filename = `${id}.json`
   const filepath = path.join(__dirname, '../mocks/users', filename)
 
   const content = {
