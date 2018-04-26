@@ -27,6 +27,11 @@ const readDirFileContents = dirPath => readdir(dirPath)
 const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
+const mustBeSignIn = (request, response, next) => {
+  if (!request.session.user) return next(Error('must be sign-in'))
+  next()
+}
+
 // readMockFolder('events').then(console.log, console.error)
 
 const app = express()
@@ -47,6 +52,7 @@ app.use((request, response, next) => {
   request.on('data', data => {
     accumulator += data
   })
+
   request.on('end', () => {
     try {
       request.body = JSON.parse(accumulator)
