@@ -45,6 +45,7 @@ signInForm.addEventListener('submit', event => {
   api('sign-in', { method: 'post', body: JSON.stringify(form) })
     .then(result => {
       console.log(result)
+      window.location = redirectTo
     })
 })
 
