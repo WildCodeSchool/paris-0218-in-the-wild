@@ -1,5 +1,4 @@
-/* global fetch */
-
+import {api} from './server.js'
 import {createHeader, createSidebar} from './components/nav.js'
 
 const params = new URLSearchParams(window.location.search)
@@ -26,11 +25,7 @@ signUpForm.addEventListener('submit', event => {
     password: password.value,
   }
 
-  fetch(`http://localhost:3248/users`, {
-    method: 'post',
-    body: JSON.stringify(form)
-  })
-    .then(res => res.json())
+  api(`users`, { method: 'post', body: JSON.stringify(form) })
     .then(result => {
       console.log(result)
       window.location = redirectTo
@@ -47,11 +42,7 @@ signInForm.addEventListener('submit', event => {
     password: password.value,
   }
 
-  fetch(`http://localhost:3248/sign-in`, {
-    method: 'post',
-    body: JSON.stringify(form)
-  })
-    .then(res => res.json())
+  api('sign-in', { method: 'post', body: JSON.stringify(form) })
     .then(result => {
       console.log(result)
     })

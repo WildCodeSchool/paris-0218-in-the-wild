@@ -1,3 +1,4 @@
+import {api} from './server.js'
 import {createEventDetail} from './components/createEventDetail.js'
 import {createHeader, createSidebar} from './components/nav.js'
 
@@ -9,9 +10,7 @@ if (!id) {
   // rediriger vers la page d'accueil
 }
 
-/* global fetch */
-fetch(`http://localhost:3248/events/${id}`)
-  .then(res => res.json())
+api(`events/${id}`)
   .then(event => {
     const eventElement = document.getElementById('event')
     console.log(event, createEventDetail(event))
