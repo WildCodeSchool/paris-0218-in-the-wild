@@ -28,6 +28,7 @@ const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
 const mustBeSignIn = (request, response, next) => {
+  console.log('session:', request.session)
   if (!request.session.user) return next(Error('must be sign-in'))
   next()
 }
@@ -41,12 +42,13 @@ app.use((request, response, next) => {
   console.log('headers', request.headers)
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Credentials', 'true') // important
+  response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 
 app.use((request, response, next) => {
-  if (request.method === 'GET') return next()
+  if (request.method !== 'POST' && request.method !== 'PUT') return next()
   let accumulator = ''
 
   request.on('data', data => {
@@ -55,7 +57,7 @@ app.use((request, response, next) => {
 
   request.on('end', () => {
     try {
-      request.body = JSON.parse(accumulator)
+      request.body = accumulator ? JSON.parse(accumulator) : {}
       next()
     } catch (err) {
       next(err)
@@ -127,7 +129,7 @@ app.get('/events/category/:category', (request, response, next) => {
   readMockFolder('events')
     .then(events => {
       const selectedEvents = events
-        .filter(event => event.category === request.params.category)       
+        .filter(event => event.category === request.params.category)
       response.json(selectedEvents)
     })
     .catch(next)
@@ -151,6 +153,13 @@ app.get('/events/:id', (request, response, next) => {
 app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
   const currentUserId = request.session.user.id
   const eventId = request.params.id
+  readMockFolder('events')
+    .then(events => {
+      const selectedEvent = events.find(event => event.id === eventId)
+      selectedEvent.attendees.push(currentUserId)
+      response.json('ok')
+    })
+    .catch(next)
 
   console.log('add', currentUserId, 'to', eventId)
 })
