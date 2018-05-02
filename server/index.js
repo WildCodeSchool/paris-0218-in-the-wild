@@ -183,17 +183,20 @@ app.get('/events/:id', (request, response, next) => {
 })
 
 app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
-  const currentUserId = request.session.user.id
+  const currentUserPseudo = request.session.user.pseudo
   const eventId = request.params.id
-  readMockFolder('events')
-    .then(events => {
-      const selectedEvent = events.find(event => event.id === eventId)
-      selectedEvent.attendees.push(currentUserId)
-      response.json('ok')
+  const filename = `${eventId}.json`
+  const filepath = path.join(__dirname, '../mocks/events', filename)
+  readFile(filepath)
+    .then(JSON.parse)
+    .then(event => {
+      event.attendees.push(currentUserPseudo)
+      return writeFile(filepath, JSON.stringify(event), 'utf8')
     })
+    .then(() => response.json('ok'))
     .catch(next)
 
-  console.log('add', currentUserId, 'to', eventId)
+  console.log('add', currentUserPseudo, 'to', eventId)
 })
 
 app.get('/categories', (request, response, next) => {

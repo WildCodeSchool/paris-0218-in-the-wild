@@ -17,6 +17,15 @@ api(`events/${id}`)
     eventElement.innerHTML = createEventDetail(event)
   })
 
+api(`events/${id}/attend`, {method: 'put'})
+  .then(event => {
+
+    // const eventElement = document.getElementById('event')
+    // console.log(event, createEventDetail(event))
+    // eventElement.innerHTML = createEventDetail(event)
+  })
+
+
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 

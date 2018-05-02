@@ -12,7 +12,7 @@ const topBarLogo = () => `
 
 const profil = props => `
   <div id="profil">
-    <img class="logo" src="https://image.noelshack.com/fichiers/2018/16/4/1524092886-clip2.png">
+    <a href="sign-in.html"><img class="logo" src="https://image.noelshack.com/fichiers/2018/16/4/1524092886-clip2.png"></a>
   </div>
 `
 
