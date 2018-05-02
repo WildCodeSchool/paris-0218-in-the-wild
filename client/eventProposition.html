@@ -6,11 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Propose ton événement</title>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
   <link rel="stylesheet" type="text/css" href="css/eventProposition.css">
+  <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
-
+  <header id="header"></header>
+  <section id="main">
+    <nav id="sidebar" class="contain-item"></nav>
   <div class="container">
     <div class="event-img">
       <label for="file" class="label-file"> + Choisir une image </label>
@@ -73,7 +80,8 @@
 
     </div>
   </div>
-  <script type="module" src="js/eventProposition/eventForm.js"></script>
+</section>
+  <script type="module" src="./js/eventProposition/eventForm.js"></script>
 <!--   <script type="module" src="js/eventProposition/eventForm2.js"></script -->
 </body>
 </html>
