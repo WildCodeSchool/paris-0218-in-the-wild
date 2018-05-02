@@ -50,7 +50,8 @@ const selectTab = tabIndex => {
   fetch('http://localhost:3248/events', {
     method: 'post',
     body: JSON.stringify(form)
-  }).then(res => res.text())
+  })
+    .then(res => res.text())
     .then(body => {
       /*window.location = */
       console.log(body)
