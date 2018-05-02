@@ -1,6 +1,6 @@
 
 /* Style inputs with type="text", select elements and textareas */
-#regForm
+.sign-forms
 {
   width: 600px;
   margin: auto;
@@ -15,6 +15,7 @@ label
 }
 
 .flex-container {
+  flex-grow: 1
 /*margin-left: 40%;*/
 }
 
@@ -29,7 +30,7 @@ label
   -webkit-box-shadow: 1px 1px 15px 3px #656565;
   -o-box-shadow: 1px 1px 15px 3px #656565;
   box-shadow: 1px 1px 15px 3px #656565;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15); 
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15);
 }
 
 input[type=text], select, textarea

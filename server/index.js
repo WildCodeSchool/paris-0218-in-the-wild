@@ -3,14 +3,17 @@ const path = require('path')
 const util = require('util')
 const bodyParser = require('body-parser')
 const express = require('express')
+const session = require('express-session')
+const sessionFileStore = require('session-file-store')
 
-
+const FileStore = sessionFileStore(session)
 
 const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
 const isJSON = str => str.endsWith('.json')
 
+const secret = 'je suis un secret' // voir https://www.youtube.com/watch?v=8BM9LPDjOw0
 const readDirFileContents = dirPath => readdir(dirPath)
   .then(filenames => {
     const filepaths = filenames
@@ -25,6 +28,11 @@ const readDirFileContents = dirPath => readdir(dirPath)
 const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
+const mustBeSignIn = (request, response, next) => {
+  if (!request.session.user) return next(Error('must be sign-in'))
+  next()
+}
+
 // readMockFolder('events').then(console.log, console.error)
 
 const app = express()
@@ -33,7 +41,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:false}))
 
 app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*')
+  // Clever, not a good practise though..
+  console.log('headers', request.headers)
+  response.header('Access-Control-Allow-Origin', request.headers.origin)
+  response.header('Access-Control-Allow-Credentials', 'true') // important
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
@@ -45,6 +56,7 @@ app.use((request, response, next) => {
   request.on('data', data => {
     accumulator += data
   })
+
   request.on('end', () => {
     try {
       request.body = JSON.parse(accumulator)
@@ -55,15 +67,47 @@ app.use((request, response, next) => {
   })
 })
 
+// Setup session handler
+app.use(session({
+  secret,
+  saveUninitialized: false,
+  resave: true,
+  store: new FileStore({ path: path.join(__dirname, '../sessions'), secret })
+}))
 // Création des routes
 app.get('/', (request, response) => {
   response.send('Ok')
 })
 
+app.post('/sign-in', (request, response, next) => {
+  const username = request.body.pseudo
+  const password = request.body.password
+  const redirectTo = request.body.redirectTo || '/homepage.html'
+
+  readMockFolder('users')
+    .then(users => {
+      console.log(users)
+      const userFound = users.find(user => user.pseudo === username)
+      console.log(userFound, { username, password })
+      if (!userFound) {
+        throw Error('User not found')
+      }
+      if (userFound.password !== password) {
+        throw Error('Wrong password')
+      }
+
+      request.session.user = userFound
+      console.log('user', userFound.pseudo, 'connected with great success')
+      response.json('ok')
+    })
+    .catch(next)
+
+})
+
 // route formulaire
 app.post('/users', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
-  const filename = `${id}.JSON`
+  const filename = `${id}.json`
   const filepath = path.join(__dirname, '../mocks/users', filename)
   response.send('it s working')
   const content = {
@@ -133,6 +177,13 @@ app.get('/events/:id', (request, response, next) => {
       response.send(buffer)
     })
     .catch(next)
+})
+
+app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
+  const currentUserId = request.session.user.id
+  const eventId = request.params.id
+
+  console.log('add', currentUserId, 'to', eventId)
 })
 
 app.get('/categories', (request, response, next) => {

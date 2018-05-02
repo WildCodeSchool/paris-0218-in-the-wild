@@ -1,5 +1,6 @@
-import {createHeader} from './components/nav.js'
+import {api} from './server.js'
 import {createEventDetail} from './components/createEventDetail.js'
+import {createHeader, createSidebar} from './components/nav.js'
 
 const params = new URLSearchParams(window.location.search)
 
@@ -9,9 +10,7 @@ if (!id) {
   // rediriger vers la page d'accueil
 }
 
-/* global fetch */
-fetch(`http://localhost:3248/events/${id}`)
-  .then(res => res.json())
+api(`events/${id}`)
   .then(event => {
     const eventElement = document.getElementById('event')
     console.log(event, createEventDetail(event))
@@ -20,3 +19,7 @@ fetch(`http://localhost:3248/events/${id}`)
 
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
+
+
+const sideEl = document.getElementById('sidebar')
+sideEl.innerHTML = createSidebar({})
