@@ -1,4 +1,4 @@
-
+import {createHeader, createSidebar} from '../components/nav.js'
 
 let currentTab = 0 // Current tab is set to be the first tab (0)
 const prevBtn = document.getElementById('prev-btn')
@@ -111,4 +111,10 @@ const init = () => {
 
 init()
 
+const headerEl = document.getElementById('header')
+headerEl.innerHTML = createHeader({})
+
+
+const sideEl = document.getElementById('sidebar')
+sideEl.innerHTML = createSidebar({})
 
