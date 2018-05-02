@@ -1,13 +1,1 @@
-{
-  "id": 13,
-  "title": "Git Pull",
-  "eventPicture": "http://napervilledemocrats.org/ntdo/wp-content/uploads/2017/10/hold-wp-meetup-coffee-shop.jpg",
-  "description": "Doit-on git pull avant ou après manger",
-  "category": "get-together",
-  "location": "Location",
-  "createdBy": "User.id",
-  "attendees": "Array of User.id",
-  "createdAt": "Date",
-  "startingTime": "Date",
-  "endingTime": "Date"
-}
+{"id":13,"title":"Git Pull","eventPicture":"http://napervilledemocrats.org/ntdo/wp-content/uploads/2017/10/hold-wp-meetup-coffee-shop.jpg","description":"Doit-on git pull avant ou après manger","category":"get-together","location":"Location","createdBy":"User.id","attendees":["kimspy","kimspy","kimspy","kimspy","kimspy","kimspy","kimspy","kimspy","benoit"],"createdAt":"Date","startingTime":"Date","endingTime":"Date"}

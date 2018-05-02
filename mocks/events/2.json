@@ -6,7 +6,7 @@
 	"category": "boire-un-coup",
 	"location":"Paris",
 	"createdBy": "User.id",
-	"attendees": "Array of User.id",
+	"attendees": [],
 	"createdAt": "Date",
 	"startingTime": "Date",
 	"endingTime": "Date"

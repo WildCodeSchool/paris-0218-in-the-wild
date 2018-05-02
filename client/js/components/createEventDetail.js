@@ -13,8 +13,8 @@ export const createEventDetail = (event) =>
   <p class="location">${event.location}</p>
   <p class="description">${event.description}</p>
   </div>
-  <div class= "btn">
-    <a class="button" type="submit" href="#">Je Participe</a>
+  <div class= "btn" id="btn-submit">
+    <a class="button"  type="submit" href="#">Je Participe</a>
   </div>
 
   </div>

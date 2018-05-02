@@ -6,7 +6,7 @@
   "category": "get-together",
   "location": "Location",
   "createdBy": "User.id",
-  "attendees": "Array of User.id",
+  "attendees": [],
   "createdAt": "Date",
   "startingTime": "Date",
   "endingTime": "Date"

@@ -190,8 +190,13 @@ app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
   readFile(filepath)
     .then(JSON.parse)
     .then(event => {
-      event.attendees.push(currentUserPseudo)
-      return writeFile(filepath, JSON.stringify(event), 'utf8')
+      if(event.attendees.find(el => el === currentUserPseudo)){
+        throw Error('You are already attending this event')
+      }
+      else{
+        event.attendees.push(currentUserPseudo)
+        return writeFile(filepath, JSON.stringify(event), 'utf8')
+      }
     })
     .then(() => response.json('ok'))
     .catch(next)

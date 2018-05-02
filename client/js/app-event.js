@@ -19,14 +19,13 @@ api(`events/${id}`)
     const attendeeList = document.getElementById('attendees')
     const attendeeLists = event.attendees.map(createAttendees).join('')
     attendeeList.innerHTML = attendeeLists
-  })
-
-api(`events/${id}/attend`, {method: 'put'})
-  .then(event => {
-
-    // const eventElement = document.getElementById('event')
-    // console.log(event, createEventDetail(event))
-    // eventElement.innerHTML = createEventDetail(event)
+    const btn = document.getElementById("btn-submit")
+    btn.addEventListener("click", ()=>{
+      api(`events/${id}/attend`, {method: 'put'})
+        .catch(err => {
+          document.getElementById('btn-submit').style.visibility = "hidden"
+        })
+    })
   })
 
 
