@@ -133,7 +133,7 @@ app.post('/users', (request, response, next) => {
 // route eventProposition
 app.post('/events', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
-  const filename = `${id}.JSON`
+  const filename = `${id}.json`
   const filepath = path.join(__dirname, '../mocks/events', filename)
 
   const content = {

@@ -13,6 +13,9 @@ export const createEventDetail = (event) =>
   <p class="location">${event.location}</p>
   <p class="description">${event.description}</p>
   </div>
+  <div class= "btn">
+    <a class="button" data-id='${event.id}' href="#">Je Participe</a>
+  </div>
 
   </div>
   `
