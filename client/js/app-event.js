@@ -1,6 +1,7 @@
 import {api} from './server.js'
 import {createEventDetail} from './components/createEventDetail.js'
 import {createHeader, createSidebar} from './components/nav.js'
+import {createAttendees} from './components/createAttendees.js'
 
 const params = new URLSearchParams(window.location.search)
 
@@ -15,6 +16,9 @@ api(`events/${id}`)
     const eventElement = document.getElementById('event')
     console.log(event, createEventDetail(event))
     eventElement.innerHTML = createEventDetail(event)
+    const attendeeList = document.getElementById('attendees')
+    const attendeeLists = event.attendees.map(createAttendees).join('')
+    attendeeList.innerHTML = attendeeLists
   })
 
 api(`events/${id}/attend`, {method: 'put'})

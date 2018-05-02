@@ -4,7 +4,7 @@ export const createEventDetail = (event) =>
 
   <div class="left-box">
   <div class="image" style="background-image: url('${event.eventPicture}')"></div>
-  <div class="attendees">${event.attendees}</div>
+  <ul id="attendees"></ul>
   </div>
 
   <div class="right-box">
