@@ -2,6 +2,7 @@ import {api} from './server.js'
 import {createHeader, createSidebar} from './components/nav.js'
 
 const params = new URLSearchParams(window.location.search)
+
 const redirectTo = params.get('redirectTo') || '/homepage.html'
 
 const signUpForm = document.getElementById('sign-up-form')
@@ -29,6 +30,7 @@ signUpForm.addEventListener('submit', event => {
     .then(result => {
       console.log(result)
       window.location = redirectTo
+
     })
 })
 

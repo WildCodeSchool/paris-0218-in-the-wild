@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Propose ton événement</title>
-
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <link rel="stylesheet" type="text/css" href="css/eventProposition.css">
 </head>
 
@@ -23,27 +23,27 @@
 
         <div class="tab">
           <span>Title :</span>
-          <input placeholder="Title of the event" oninput="this.className = ''">
+          <input placeholder="Title of the event" id="title" >
         </div>
 
         <div class="tab">
           <span>Location :</span>
-          <input placeholder="Location of the event" oninput="this.className = ''">
+          <input placeholder="Location of the event" id="location">
         </div>
 
         <div class="tab">
           <span>Starting Time :</span>
-          <input type="date" placeholder="Starting Time" oninput="this.className = ''">
+          <input type="date" placeholder="Starting Time" id="startingTime">
         </div>
 
         <div class="tab">
           <span>Description :</span>
-          <input type="text" placeholder="Description of the event" oninput="this.className = ''">
+          <input type="text" placeholder="Description of the event" id="description">
         </div>
 
         <div class="tab">
           <span>Category :</span>
-          <select type="dropdown" placeholder="Category of the event" oninput="this.className = ''">
+          <select type="dropdown" placeholder="Category of the event" id="category">
 
               <option value="get together">Get Together</option>
               <option value="boire un coup">Boire un verre</option>
@@ -74,5 +74,6 @@
     </div>
   </div>
   <script type="module" src="js/eventProposition/eventForm.js"></script>
+<!--   <script type="module" src="js/eventProposition/eventForm2.js"></script -->
 </body>
 </html>
