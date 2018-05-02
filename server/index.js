@@ -1,12 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 const util = require('util')
-
+const bodyParser = require('body-parser')
 const express = require('express')
 const session = require('express-session')
 const sessionFileStore = require('session-file-store')
 
 const FileStore = sessionFileStore(session)
+
 const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
@@ -36,6 +37,9 @@ const mustBeSignIn = (request, response, next) => {
 // readMockFolder('events').then(console.log, console.error)
 
 const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:false}))
 
 app.use((request, response, next) => {
   // Clever, not a good practise though..
@@ -108,7 +112,7 @@ app.post('/users', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
   const filename = `${id}.json`
   const filepath = path.join(__dirname, '../mocks/users', filename)
-
+  response.send('it s working')
   const content = {
     id: id,
     firstName: request.body.firstName,
@@ -125,6 +129,33 @@ app.post('/users', (request, response, next) => {
     .then(() => response.json('ok'))
     .catch(next)
 })
+
+// route eventProposition
+app.post('/events', (request, response, next) => {
+  const id = Math.random().toString(36).slice(2).padEnd(4, '0')
+  const filename = `${id}.JSON`
+  const filepath = path.join(__dirname, '../mocks/events', filename)
+
+  const content = {
+    id: id,
+    title: request.body.title,
+    eventPicture: "http://www.stylistic.fr/wp-content/uploads/2013/12/alcool1.jpg",
+    description: request.body.description,
+    category: request.body.category,
+    location: request.body.location,
+    createdBy: "test",
+    attendees: [],
+    CreatedAt: Date.now(),
+    startingTime: Date.now(),
+    endingTime: Date.now(),
+  }
+
+  writeFile(filepath, JSON.stringify(content), 'utf8')
+    .then(() => response.json('ok'))
+    .catch(next)
+})
+
+
 
 app.get('/events/category/:category', (request, response, next) => {
   readMockFolder('events')
