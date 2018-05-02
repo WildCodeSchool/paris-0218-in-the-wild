@@ -39,7 +39,7 @@ const app = express()
 
 app.use((request, response, next) => {
   // Clever, not a good practise though..
-  console.log('headers', request.headers)
+  /*console.log('headers', request.headers)*/
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Credentials', 'true') // important
   response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
@@ -84,7 +84,7 @@ app.post('/sign-in', (request, response, next) => {
 
   readMockFolder('users')
     .then(users => {
-      console.log(users)
+      /*console.log(users)*/
       const userFound = users.find(user => user.pseudo === username)
       console.log(userFound, { username, password })
       if (!userFound) {
@@ -96,6 +96,7 @@ app.post('/sign-in', (request, response, next) => {
 
       request.session.user = userFound
       console.log('user', userFound.pseudo, 'connected with great success')
+
       response.json('ok')
     })
     .catch(next)
