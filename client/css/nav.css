@@ -67,14 +67,30 @@ ul {
   margin: 0;
 }
 
-li {
+li{
   list-style: none;
 }
+
+.cont {
+  height:15rem;
+}
+
 
 nav#sidebar.contain-item {
   padding: 0;
   width: 13.2rem;
   flex-shrink: 0;
+}
+
+.filter{
+  width:100%;
+  height: 150px;
+  background-color: #22B573;
+  opacity:0;
+}
+
+.filter:hover{
+  opacity: 0.4;
 }
 
 /*a[class| = "visual"] {
@@ -163,3 +179,4 @@ header nav a {
   display: block;
   height: 12.5rem;
 }
+

@@ -73,16 +73,19 @@ span{
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 10rem;
+  height: 100vh;
   
 }
 
 .event {
- width: 20rem;
+ width: 30rem;
   margin: 2rem;
-  height: 15rem;
+  height: 20rem;
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 
-
+.image-bloc{
+  /*height:100vh;*/
+}

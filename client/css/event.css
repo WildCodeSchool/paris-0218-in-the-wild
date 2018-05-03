@@ -18,12 +18,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
- .left-box{
+.left-box{
   flex-direction: column;
  }
 
 .right-box{
+  display: flex;
   flex-direction: column;
+  width:50vw;
+  text-align: center;
+  justify-content: space-around;
+
 }
 
 .title{
