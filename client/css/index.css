@@ -52,9 +52,11 @@ button, input, label{
 input[type='color']{
   color: #22B573;
   border-radius: 0rem;
+
 }
 
 a{
   font-family: 'eventsFont';
   color:grey;
+  padding:5rem;
 }

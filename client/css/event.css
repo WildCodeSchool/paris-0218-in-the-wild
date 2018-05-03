@@ -8,8 +8,9 @@
   flex-wrap: wrap;
 }
 
-.event{
-  width: 50%; 
+#event{
+  
+  height: 100vh;
 }
 
 .image{
@@ -26,12 +27,11 @@
   display: flex;
   flex-direction: column;
   width:50vw;
-  text-align: center;
+  text-align: right;
   justify-content: space-around;
-
 }
 
-.title{
+p{
   font-family: eventsFont;
   font-size: 2rem;
 }
@@ -42,3 +42,21 @@
   color: white;
   font-family: 'eventsFont';
 }
+.btn{
+  text-align: center;
+
+}
+
+#attendees{
+  margin-top: 5rem;
+  margin-left:5rem;
+}
+
+.attendee{
+  padding:1rem;
+}
+
+h1{
+  font-family: 'eventsFont';
+  text-align:center;
+} 
