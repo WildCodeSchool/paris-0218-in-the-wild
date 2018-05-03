@@ -9,14 +9,14 @@
 
 label
 {
-  color:white;
+/*  color:white;*/
   font-size: 30px;
   font-family: 'Asap', sans-serif;
 }
 
 .flex-container {
   flex-grow: 1
-/*margin-left: 40%;*/
+
 }
 
 .container
@@ -24,13 +24,14 @@ label
   position: relative;
   bottom: 12rem;
   border-radius: 5px;
-  background-color: #22B573;
+  border-color: solid #22B573;
+  /*background-color: #22B573;*/
   padding: 20px;
-  -moz-box-shadow: 1px 1px 15px 3px #656565;
-  -webkit-box-shadow: 1px 1px 15px 3px #656565;
-  -o-box-shadow: 1px 1px 15px 3px #656565;
-  box-shadow: 1px 1px 15px 3px #656565;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15);
+  /*-moz-box-shadow: 1px 1px 15px 3px #656565;*/
+  /*-webkit-box-shadow: 1px 1px 15px 3px #656565;*/
+  /*-o-box-shadow: 1px 1px 15px 3px #656565;*/
+  /*box-shadow: 1px 1px 15px 3px #656565;*/
+  /*filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=15);*/
 }
 
 input[type=text], select, textarea
@@ -73,6 +74,7 @@ input[type=password], select, textarea
   resize: vertical;
   /* Allow the user to vertically resize the textarea (not horizontally) */
   font-family: 'Asap', sans-serif;
+
 }
 
 
@@ -101,7 +103,7 @@ input[type=email], select, textarea
 /* Style the submit button with a specific background color etc */
 input[type=submit]
 {
-  background-color: #A9A9A9;
+  background-color: #22B573;
   color: white;
   font-size: 20px;
   padding: 12px 20px;
