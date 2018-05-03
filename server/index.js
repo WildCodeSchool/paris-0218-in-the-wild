@@ -39,11 +39,9 @@ const mustBeSignIn = (request, response, next) => {
 const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended:false}))
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use((request, response, next) => {
-  // Clever, not a good practise though..
-  /*console.log('headers', request.headers)*/
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Credentials', 'true') // important
   response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
@@ -84,7 +82,6 @@ app.get('/', (request, response) => {
 app.post('/sign-in', (request, response, next) => {
   const username = request.body.pseudo
   const password = request.body.password
-  const redirectTo = request.body.redirectTo || '/homepage.html'
 
   readMockFolder('users')
     .then(users => {

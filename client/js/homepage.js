@@ -42,3 +42,11 @@ api(`events/category/live-coding`)
     getTogetherCountPLace.innerHTML = getTogetherCountNumber
   })
 
+const reload = () => {
+  if (!window.location.hash) {
+    window.location = window.location + '#loaded'
+    setTimeout(window.location.reload(), 1000)
+  }
+}
+
+window.onload = reload()
