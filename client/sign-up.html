@@ -2,28 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sign In</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-  <link rel="stylesheet" href="./css/form.css">
-  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/eventProposition.css">
+  <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-  <header id="header"></header>
-  <section id="main" class= "container-fluid">
-    <nav id="sidebar" class="contain-item"></nav>
-    <div class="flex-container">
-      <form id="sign-up-form" class="sign-forms">
-        <div class="container">
-          <label><input type="text" id="fname" name="firstname" placeholder="Your First name..."></label>
-          <label><input type="text" id="lsname" name="lastname" placeholder="Your last name..."></label>
-          <label><input type="text" id="Username" name="username" placeholder="Your username..."></label>
-          <label><input type="email" id="mailing" name="email" placeholder="Your email..."></label>
-          <label>
-            <select id="school" name="schoolist">
-              <option value="choose">Choose your school...</option>
+
+  <div class="form-container">
+
+      <form id="reg-form" class="event-form" action="">
+
+        <div class="tab">
+          <span>First Name :</span>
+          <input type="text" placeholder="Your first name" id="fname" >
+        </div>
+
+        <div class="tab">
+          <span>Last Name :</span>
+          <input type="text" placeholder="Your last name" id="lsname" >
+        </div>
+
+        <div class="tab">
+          <span>Username :</span>
+          <input type="text" placeholder="Your username" id="Username" >
+        </div>
+
+        <div class="tab">
+          <span>Email :</span>
+          <input type="email" placeholder="Your email" id="mailing">
+        </div>
+
+        <div class="tab">
+          <span>Choose your school :</span>
+          <select type="dropdown" placeholder="School list" id="school">
+
+              <option value="choose">Scroll down...</option>
               <option value="Paris">Paris</option>
               <option value="Marseille">Marseille</option>
               <option value="Toulouse">Toulouse</option>
@@ -34,16 +53,43 @@
               <option value="Strasbourg">Strasbourg</option>
               <option value="Reims">Reims</option>
               <option value="Tours">Tours</option>
-            </select>
-          </label>
-          <label><input type="password" id="password" name="pass" placeholder="Create your password..."></label>
-          <label><input type="password" id="yourpass" name="yourpass" placeholder="Confirm your Password..."></label>
-          <input type="submit" value="post">
+
+          </select>
         </div>
+
+        <div class="tab">
+          <span>Password :</span>
+          <input type="password" placeholder="Your password" id="password">
+        </div>
+
+        <div class="tab">
+          <span>Password :</span>
+          <input type="password" placeholder="Confirm your password" id="yourpass">
+        </div>
+
+        <div class="buttons">
+          <div>
+            <button type="button" class="prev-btn" id="prev-btn"> < </button>
+            <button type="button" class="next-btn" id="next-btn"> > </button>
+          </div>
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+
       </form>
 
     </div>
-  </section>
-  <script type="module" src="./js/app-sign-up.js"></script>
+
+
+<script type="module" src="./js/app-sign-up.js"></script>
 </body>
 </html>
