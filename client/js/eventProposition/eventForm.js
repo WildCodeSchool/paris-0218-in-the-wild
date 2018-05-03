@@ -38,6 +38,7 @@ const selectTab = tabIndex => {
   const startingTime = document.getElementById('startingTime')
   const description = document.getElementById('description')
   const category = document.getElementById('category')
+  const url = document.getElementById('url')
 
   const form = {
     title: title.value,
@@ -45,6 +46,7 @@ const selectTab = tabIndex => {
     startingTime: startingTime.value,
     description: description.value,
     category: category.value,
+    url: url.value,
   }
 
   fetch('http://localhost:3248/events', {
@@ -53,7 +55,8 @@ const selectTab = tabIndex => {
   })
     .then(res => res.text())
     .then(body => {
-      /*window.location = */
+      const id = body.slice(1,-1)
+      window.location = `event.html?id=${id}`
       console.log(body)
     })
 }

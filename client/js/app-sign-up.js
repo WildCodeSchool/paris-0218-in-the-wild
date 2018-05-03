@@ -38,6 +38,7 @@ const selectTab = tabIndex => {
   const username = document.getElementById('Username')
   const mail = document.getElementById('mailing')
   const schoolist = document.getElementById('school')
+  const profilPicture = document.getElementById('url')
   const password = document.getElementById('password')
   const confirmPassword = document.getElementById('yourpass')
 
@@ -46,6 +47,7 @@ const selectTab = tabIndex => {
     lastName: lastNameUsers.value,
     pseudo: username.value,
     email: mail.value,
+    url: profilPicture.value,
     schoolName: schoolist.value,
     password: password.value,
   }
@@ -56,12 +58,12 @@ const selectTab = tabIndex => {
   })
     .then(window.location = 'homepage.html')
     .then(body => {
-      
+
       console.log(body)
     })
 }
 
-const prev = () => selectTab(currentTab)
+const prev = () => selectTab(currentTab - 1)
 const next = () => {
   if (!validateForm()) return false
   return selectTab(currentTab + 1)

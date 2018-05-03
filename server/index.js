@@ -122,6 +122,7 @@ app.post('/users', (request, response, next) => {
     schoolName: request.body.schoolName,
     password: request.body.password,
     validePassword: request.body.confirmPassword,
+    profilPicture: request.body.url,
     CreatedAt: Date.now()
   }
 
@@ -139,7 +140,7 @@ app.post('/events', (request, response, next) => {
   const content = {
     id: id,
     title: request.body.title,
-    eventPicture: "http://www.stylistic.fr/wp-content/uploads/2013/12/alcool1.jpg",
+    eventPicture:request.body.url,
     description: request.body.description,
     category: request.body.category,
     location: request.body.location,
@@ -151,7 +152,7 @@ app.post('/events', (request, response, next) => {
   }
 
   writeFile(filepath, JSON.stringify(content), 'utf8')
-    .then(() => response.json('ok'))
+    .then(() => response.json(id))
     .catch(next)
 })
 

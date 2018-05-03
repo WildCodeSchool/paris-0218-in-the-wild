@@ -8,7 +8,7 @@ const params = new URLSearchParams(window.location.search)
 const id = params.get('id')
 
 if (!id) {
-  // rediriger vers la page d'accueil
+  window.location = `homepage.html`
 }
 
 api(`events/${id}`)
@@ -34,9 +34,18 @@ api(`events/${id}`)
   })
 
 
+
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
 
 const sideEl = document.getElementById('sidebar')
 sideEl.innerHTML = createSidebar({})
+
+//function utiliser pour reload la page une fois  des le debut.
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        setTimeout(window.location.reload(),1000);
+    }
+}
