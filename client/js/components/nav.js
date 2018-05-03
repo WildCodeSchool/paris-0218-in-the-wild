@@ -27,16 +27,17 @@ export const createHeader = props => `
 /* Deuxième module : la sidebar */
 
 const visuals = (pic, link) => `
-  <li>
+  <li class="cont">
     <a class=${pic} href= ${link}>
+    <div class="filter"></div>
     </a>
   </li>
 `
 export const createSidebar = param => `
   <ul>
-    <li><a href="event-list-page.html?category=get-together"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png" alt=""></a></li>
-    <li><a href="event-list-page.html?category=boire-un-coup"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524093506-sortie.gif" alt=""></a></li>
-    <li><a href="event-list-page.html?category=cours-de-soutien"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094338-nope.png" alt=""></a></li>
-    <li><a href="event-list-page.html?category=live-coding"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094882-mat.png" alt=""></a></li>
+    ${visuals('visual-one', 'event-list-page.html?category=get-together')}
+    ${visuals('visual-two', 'event-list-page.html?category=boire-un-coup')}
+    ${visuals('visual-three', 'event-list-page.html?category=cours-de-soutien')}
+    ${visuals('visual-four', 'event-list-page.html?category=live-coding')}
   </ul>
 `

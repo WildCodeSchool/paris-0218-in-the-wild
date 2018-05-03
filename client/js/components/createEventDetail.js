@@ -12,10 +12,11 @@ export const createEventDetail = (event) =>
   <p class="date">${event.startingTime}</p>
   <p class="location">${event.location}</p>
   <p class="description">${event.description}</p>
-  </div>
   <div class= "btn" id="btn-submit">
     <a class="button"  type="submit" href="#">Je Participe</a>
   </div>
+  </div>
+
 
   </div>
   `
