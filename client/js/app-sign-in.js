@@ -5,6 +5,7 @@ const params = new URLSearchParams(window.location.search)
 
 const redirectTo = params.get('redirectTo') || '/homepage.html'
 
+
 const signUpForm = document.getElementById('sign-up-form')
 signUpForm.addEventListener('submit', event => {
   event.preventDefault()
@@ -29,8 +30,8 @@ signUpForm.addEventListener('submit', event => {
   api(`users`, { method: 'post', body: JSON.stringify(form) })
     .then(result => {
       console.log(result)
-      window.location = redirectTo
 
+      window.location = redirectTo
     })
 })
 

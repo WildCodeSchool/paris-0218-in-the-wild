@@ -29,6 +29,7 @@ const readMockFolder = mockDir =>
   readDirFileContents(path.join(__dirname, '../mocks/', mockDir))
 
 const mustBeSignIn = (request, response, next) => {
+  console.log('session:', request.session)
   if (!request.session.user) return next(Error('must be sign-in'))
   next()
 }
@@ -42,15 +43,16 @@ app.use(bodyParser.urlencoded({ extended:false}))
 
 app.use((request, response, next) => {
   // Clever, not a good practise though..
-  console.log('headers', request.headers)
+  /*console.log('headers', request.headers)*/
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Credentials', 'true') // important
+  response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 
 app.use((request, response, next) => {
-  if (request.method === 'GET') return next()
+  if (request.method !== 'POST' && request.method !== 'PUT') return next()
   let accumulator = ''
 
   request.on('data', data => {
@@ -59,7 +61,7 @@ app.use((request, response, next) => {
 
   request.on('end', () => {
     try {
-      request.body = JSON.parse(accumulator)
+      request.body = accumulator ? JSON.parse(accumulator) : {}
       next()
     } catch (err) {
       next(err)
@@ -86,7 +88,7 @@ app.post('/sign-in', (request, response, next) => {
 
   readMockFolder('users')
     .then(users => {
-      console.log(users)
+      /*console.log(users)*/
       const userFound = users.find(user => user.pseudo === username)
       console.log(userFound, { username, password })
       if (!userFound) {
@@ -98,6 +100,7 @@ app.post('/sign-in', (request, response, next) => {
 
       request.session.user = userFound
       console.log('user', userFound.pseudo, 'connected with great success')
+
       response.json('ok')
     })
     .catch(next)
@@ -130,7 +133,7 @@ app.post('/users', (request, response, next) => {
 // route eventProposition
 app.post('/events', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(4, '0')
-  const filename = `${id}.JSON`
+  const filename = `${id}.json`
   const filepath = path.join(__dirname, '../mocks/events', filename)
 
   const content = {
@@ -180,10 +183,25 @@ app.get('/events/:id', (request, response, next) => {
 })
 
 app.put('/events/:id/attend', mustBeSignIn, (request, response, next) => {
-  const currentUserId = request.session.user.id
+  const currentUserPseudo = request.session.user.pseudo
   const eventId = request.params.id
+  const filename = `${eventId}.json`
+  const filepath = path.join(__dirname, '../mocks/events', filename)
+  readFile(filepath)
+    .then(JSON.parse)
+    .then(event => {
+      if(event.attendees.find(el => el === currentUserPseudo)){
+        throw Error('You are already attending this event')
+      }
+      else{
+        event.attendees.push(currentUserPseudo)
+        return writeFile(filepath, JSON.stringify(event), 'utf8')
+      }
+    })
+    .then(() => response.json('ok'))
+    .catch(next)
 
-  console.log('add', currentUserId, 'to', eventId)
+  console.log('add', currentUserPseudo, 'to', eventId)
 })
 
 app.get('/categories', (request, response, next) => {

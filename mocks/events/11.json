@@ -1,13 +1,1 @@
-{
-  "id": 11,
-  "title": "coder comme Clément",
-  "eventPicture": "https://image.freepik.com/free-vector/smiling-teacher-welcoming-students_3446-315.jpg",
-  "description": "pour ceux que ça tenterait...",
-  "category": "cours-de-soutien",
-  "location": "Location",
-  "createdBy": "User.id",
-  "attendees": "Array of User.id",
-  "createdAt": "Date",
-  "startingTime": "Date",
-  "endingTime": "Date"
-}
+{"id":11,"title":"coder comme Clément","eventPicture":"https://image.freepik.com/free-vector/smiling-teacher-welcoming-students_3446-315.jpg","description":"pour ceux que ça tenterait...","category":"cours-de-soutien","location":"Location","createdBy":"User.id","attendees":["kimspy"],"createdAt":"Date","startingTime":"Date","endingTime":"Date"}

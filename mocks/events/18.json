@@ -1,13 +1,1 @@
-{
-  "id": 18,
-  "title": "html dynamique",
-  "eventPicture": "https://bump-festival.be/2017/assets/img/alex-mclean/alex_mclean_mugshot_btwb83_c_scale,w_1672.jpg",
-  "description": "générer son html dynamiquement",
-  "category": "live-coding",
-  "location": "Location",
-  "createdBy": "User.id",
-  "attendees": "Array of User.id",
-  "createdAt": "Date",
-  "startingTime": "Date",
-  "endingTime": "Date"
-}
+{"id":18,"title":"html dynamique","eventPicture":"https://bump-festival.be/2017/assets/img/alex-mclean/alex_mclean_mugshot_btwb83_c_scale,w_1672.jpg","description":"générer son html dynamiquement","category":"live-coding","location":"Location","createdBy":"User.id","attendees":["kimspy"],"createdAt":"Date","startingTime":"Date","endingTime":"Date"}
