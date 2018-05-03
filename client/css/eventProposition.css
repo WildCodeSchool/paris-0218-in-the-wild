@@ -6,10 +6,28 @@ body {
   color: #333333;
 }
 
+@font-face {
+  font-family: 'titleFont';
+  src: url('fonts/Freight_Big_Book_Italic.otf');
+}
+
+@font-face {
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
+}
+
 *:focus {
   outline: 0;
 }
 
+.header{
+  height: 13.2rem;
+  border-bottom: solid #22B573;
+  font-size: 7rem;
+  font-family: 'eventsFont';
+  font-weight: bold;
+  text-align: center;
+}
 .container {
   
 }
