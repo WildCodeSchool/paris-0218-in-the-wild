@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'titleFont';
+  src: url('fonts/Freight_Big_Book_Italic.otf');
+}
+
+@font-face {
+  font-family: 'eventsFont';
+  src: url('fonts/avenir/AEH.ttf');
+}
+
+.header{
+  height: 13.2rem;
+  border-bottom: solid #22B573;
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-fluid{
+  display:flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+
+  position: absolute;
+
+}
+
+h1{
+  padding-top: 10rem;
+  text-align: center;
+  font-family: 'eventsFont';
+}
+
+p{
+  font-family: 'eventsFont';
+  text-align: center;
+}
+
+input[type=submit]{
+  background-color: #22B573;
+  border-color: #22B573;
+  cursor: pointer;
+  border-radius: 0rem;
+  
+}
+
+button, input, label{
+  font-family: eventsFont;
+}
+
+input[type='color']{
+  color: #22B573;
+  border-radius: 0rem;
+}
+
+a{
+  font-family: 'eventsFont';
+  color:grey;
+}
