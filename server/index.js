@@ -100,7 +100,8 @@ app.post('/sign-in', (request, response, next) => {
 
       request.session.user = userFound
       console.log('user', userFound.pseudo, 'connected with great success')
-
+      request.session.profilpicture = userFound.profilPicture
+      console.log('picturepath loaded', userFound.prof)
       response.json('ok')
     })
     .catch(next)
@@ -214,5 +215,9 @@ app.get('/categories', (request, response, next) => {
 // app.post('/eventProposition', (request, response) => {
 //   response.json(categories)
 // })
+app.get('/currentuserpic', (request, response, next) => {
+  const currentUserPic = request.session.user.profilPicture
+  response.json(currentUserPic)
+})
 
 app.listen(3248, () => console.log("j'écoute sur le port 3248"))

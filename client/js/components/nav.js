@@ -10,15 +10,15 @@ const topBarLogo = () => `
   </div>
 `
 
-const profil = props => `
+const profil = () => `
   <div id="profil">
-    <a href="index.html"><img class="logo" src="https://image.noelshack.com/fichiers/2018/16/4/1524092886-clip2.png"></a>
+    <a href="index.html"><img class="logo" id="logo-img"></a>
   </div>
 `
 
 export const createHeader = props => `
   <nav>
-    ${profil(props)}
+    ${profil()}
     ${action('JE PARTICIPE', 'homepage.html')}
     ${action('JE PROPOSE', 'eventProposition.html')}
     ${topBarLogo()}
@@ -28,12 +28,12 @@ export const createHeader = props => `
 
 const visuals = (pic, link) => `
   <li class="cont">
-    <a class=${pic} href= ${link}>
+    <a class=${pic} href=${link}>
     <div class="filter"></div>
     </a>
   </li>
 `
-export const createSidebar = param => `
+export const createSidebar = props => `
   <ul>
     ${visuals('visual-one', 'event-list-page.html?category=get-together')}
     ${visuals('visual-two', 'event-list-page.html?category=boire-un-coup')}

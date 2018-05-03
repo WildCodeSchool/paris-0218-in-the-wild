@@ -27,6 +27,7 @@ api(`events/${id}`)
     const btn = document.getElementById("btn-submit")
     btn.addEventListener("click", ()=>{
       api(`events/${id}/attend`, {method: 'put'})
+        .then(window.location.reload())
         .catch(err => {
 
         })
@@ -38,6 +39,8 @@ api(`events/${id}`)
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+api(`currentuserpic`)
+  .then(url => document.getElementById('logo-img').src = url)
 
 const sideEl = document.getElementById('sidebar')
 sideEl.innerHTML = createSidebar({})
