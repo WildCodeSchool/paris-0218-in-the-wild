@@ -19,7 +19,7 @@ const profil = props => `
 export const createHeader = props => `
   <nav>
     ${profil(props)}
-    ${action('JE PARTICIPE', '#')}
+    ${action('JE PARTICIPE', 'homepage.html')}
     ${action('JE PROPOSE', 'eventProposition.html')}
     ${topBarLogo()}
   </nav>
@@ -34,9 +34,9 @@ const visuals = (pic, link) => `
 `
 export const createSidebar = param => `
   <ul>
-    ${visuals('visual-one', 'event-list-page.html?category=get-together')}
-    ${visuals('visual-two', 'event-list-page.html?category=boire-un-coup')}
-    ${visuals('visual-three', 'event-list-page.html?category=cours-de-soutien')}
-    ${visuals('visual-four', 'event-list-page.html?category=live-coding')}
+    <li><a href="event-list-page.html?category=get-together"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png" alt=""></a></li>
+    <li><a href="event-list-page.html?category=boire-un-coup"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524093506-sortie.gif" alt=""></a></li>
+    <li><a href="event-list-page.html?category=cours-de-soutien"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094338-nope.png" alt=""></a></li>
+    <li><a href="event-list-page.html?category=live-coding"><img src="https://image.noelshack.com/fichiers/2018/16/4/1524094882-mat.png" alt=""></a></li>
   </ul>
 `

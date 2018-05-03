@@ -87,6 +87,7 @@ a.visual-one {
   background-image: url("https://image.noelshack.com/fichiers/2018/16/4/1524094859-to.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: green;
   /*background-size: 200px;*/
 }
 
