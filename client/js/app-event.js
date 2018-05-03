@@ -14,8 +14,13 @@ if (!id) {
 api(`events/${id}`)
   .then(event => {
     const eventElement = document.getElementById('event')
+
     console.log(event, createEventDetail(event))
     eventElement.innerHTML = createEventDetail(event)
+
+    // if(event.attendees.find(el => el === request.session.user.pseudo)){
+    //   document.getElementById('btn-submit').style.visibility = "hidden"
+    // }
     const attendeeList = document.getElementById('attendees')
     const attendeeLists = event.attendees.map(createAttendees).join('')
     attendeeList.innerHTML = attendeeLists
@@ -23,7 +28,7 @@ api(`events/${id}`)
     btn.addEventListener("click", ()=>{
       api(`events/${id}/attend`, {method: 'put'})
         .catch(err => {
-          document.getElementById('btn-submit').style.visibility = "hidden"
+
         })
     })
   })
