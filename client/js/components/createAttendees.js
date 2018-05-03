@@ -1,4 +1,4 @@
 export const createAttendees = (event) =>
-`<li>${event}</li>`
+`<li class="attendee">#${event}</li>`
 
 
