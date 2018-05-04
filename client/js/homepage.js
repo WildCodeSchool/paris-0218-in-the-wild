@@ -4,6 +4,9 @@ import {api} from './server.js'
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+api(`currentuserpic`)
+  .then(url => document.getElementById('logo-img').src = url)
+
 const sideEl = document.getElementById('sidebar')
 sideEl.innerHTML = createSidebar({})
 
@@ -39,3 +42,11 @@ api(`events/category/live-coding`)
     getTogetherCountPLace.innerHTML = getTogetherCountNumber
   })
 
+const reload = () => {
+  if (!window.location.hash) {
+    window.location = window.location + '#loaded'
+    setTimeout(window.location.reload(), 1000)
+  }
+}
+
+window.onload = reload()

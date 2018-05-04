@@ -39,11 +39,9 @@ const mustBeSignIn = (request, response, next) => {
 const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended:false}))
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use((request, response, next) => {
-  // Clever, not a good practise though..
-  /*console.log('headers', request.headers)*/
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Credentials', 'true') // important
   response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
@@ -84,7 +82,6 @@ app.get('/', (request, response) => {
 app.post('/sign-in', (request, response, next) => {
   const username = request.body.pseudo
   const password = request.body.password
-  const redirectTo = request.body.redirectTo || '/homepage.html'
 
   readMockFolder('users')
     .then(users => {
@@ -100,7 +97,8 @@ app.post('/sign-in', (request, response, next) => {
 
       request.session.user = userFound
       console.log('user', userFound.pseudo, 'connected with great success')
-
+      request.session.profilpicture = userFound.profilPicture
+      console.log('picturepath loaded', userFound.prof)
       response.json('ok')
     })
     .catch(next)
@@ -214,5 +212,9 @@ app.get('/categories', (request, response, next) => {
 // app.post('/eventProposition', (request, response) => {
 //   response.json(categories)
 // })
+app.get('/currentuserpic', (request, response, next) => {
+  const currentUserPic = request.session.user.profilPicture
+  response.json(currentUserPic)
+})
 
 app.listen(3248, () => console.log("j'écoute sur le port 3248"))

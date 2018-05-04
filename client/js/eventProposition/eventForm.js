@@ -1,5 +1,7 @@
 import {createHeader, createSidebar} from '../components/nav.js'
 
+import {api} from '../server.js'
+
 let currentTab = 0 // Current tab is set to be the first tab (0)
 const prevBtn = document.getElementById('prev-btn')
 const nextBtn = document.getElementById('next-btn')
@@ -116,6 +118,9 @@ init()
 
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
+
+api(`currentuserpic`)
+  .then(url => document.getElementById('logo-img').src = url)
 
 
 const sideEl = document.getElementById('sidebar')

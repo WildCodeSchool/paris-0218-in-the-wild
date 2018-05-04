@@ -24,28 +24,32 @@ api(`events/${id}`)
     const attendeeList = document.getElementById('attendees')
     const attendeeLists = event.attendees.map(createAttendees).join('')
     attendeeList.innerHTML = attendeeLists
-    const btn = document.getElementById("btn-submit")
-    btn.addEventListener("click", ()=>{
+    const btn = document.getElementById('btn-submit')
+    btn.addEventListener('click', () => {
       api(`events/${id}/attend`, {method: 'put'})
+        .then(window.location.reload())
         .catch(err => {
-
+          console.log(err)
         })
     })
   })
 
-
-
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+api(`currentuserpic`)
+  .then(url => { document.getElementById('logo-img').src = url })
 
 const sideEl = document.getElementById('sidebar')
 sideEl.innerHTML = createSidebar({})
 
-//function utiliser pour reload la page une fois  des le debut.
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        setTimeout(window.location.reload(),1000);
-    }
+// function utiliser pour reload la page une fois  des le debut.
+
+const reload = () => {
+  if (!window.location.hash) {
+    window.location = window.location + '#loaded'
+    setTimeout(window.location.reload(), 1000)
+  }
 }
+
+window.onload = reload()

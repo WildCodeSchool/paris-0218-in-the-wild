@@ -32,6 +32,8 @@ api(`events/category/${category}`)
 const headerEl = document.getElementById('header')
 headerEl.innerHTML = createHeader({})
 
+api(`currentuserpic`)
+  .then(url => document.getElementById('logo-img').src = url)
 
 const sideEl = document.getElementById('sidebar')
 sideEl.innerHTML = createSidebar({})
