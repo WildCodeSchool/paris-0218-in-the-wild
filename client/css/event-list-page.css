@@ -12,13 +12,13 @@
   position: fixed;
   height: 40rem;
   opacity: 0.6;
-  padding-top: 10rem;
+  margin-top: 10rem;
   margin-left: 10rem;
 }
 
 .section-name{
-  /*position: fixed;
-  padding-top: 12vh;*/
+  position: fixed;
+  /*padding-top: 12vh;*/
   margin-left: 25%;
   font-family: 'eventsFont';
   color: black;

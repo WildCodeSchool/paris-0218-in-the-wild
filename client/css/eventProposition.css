@@ -172,3 +172,8 @@ body {
 .block {
   display: block;
 }
+
+h1{
+  text-align: center;
+  margin-bottom: 13rem;
+}
