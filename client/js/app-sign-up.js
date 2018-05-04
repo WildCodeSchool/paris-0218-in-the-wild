@@ -56,7 +56,7 @@ const selectTab = tabIndex => {
     method: 'post',
     body: JSON.stringify(form)
   })
-    .then(window.location = 'homepage.html')
+    .then(window.location = 'index.html')
     .then(body => {
 
       console.log(body)
